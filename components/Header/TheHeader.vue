@@ -96,7 +96,7 @@
            fixed :right="$vuetify.rtl"    
 
         >
-        <v-list-item class="py-4 px-1">
+        <v-list-item class="py-4 px-1 logo-box">
           <div class="logo">
             <NuxtLink :to="localePath('/')" >
             <v-img v-if="!$vuetify.theme.dark" width="50" :src="require('static/logo2.png')" ></v-img>
@@ -217,3 +217,9 @@ import Sidebar from './Sidebar.vue';
   },
   }
   </script>
+
+<style scoped>
+.logo-box{
+  background-color: var(--v-default-base) !important;
+}
+</style>
