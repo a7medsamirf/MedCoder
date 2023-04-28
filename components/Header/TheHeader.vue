@@ -150,7 +150,7 @@
 
       
       <!---------- Start App Bar ---------->
-      <v-app-bar app height="85px" fixed  elevation="0">
+      <v-app-bar app height="85px" fixed  elevation="0"   style="border-bottom: 1px solid #ffffff1f !important">
         <v-container class="pa-0 fill-height">
  <!--          <v-app-bar-nav-icon class="hidden-md-and-up"  @click.stop="drawer = !drawer" /> -->
           <v-app-bar-nav-icon class="hidden-lg-and-up" @click.stop="drawer = !drawer" />
