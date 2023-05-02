@@ -6,19 +6,23 @@
         <v-container>
           <v-row align="center" justify="center">
             <v-col cols="12" md="6" class="px-0">
-              <div class="box">
+              <div class="box half-hero-wrap">
+                <div class="title2">
+                    <div class="block"> </div>
+                    <h1 class="text-color-default hero-title ">{{ $t('HeroSection.hello') }} <br>
+                      <span class="name-color">{{ $t('HeroSection.im') }} <span>{{ $t('HeroSection.ahmed') }} </span></span>
+                      <br> 
+                      <span class="job-title"> {{ $t('HeroSection.FrontEnd') }}</span>
+                      <div class="dot"></div>
+                    
+                    </h1>
+                </div>
+                  <div class="role">
+                      <div class="block"></div>
+                      <h4 class="use-text-subtitle hero-subtitle">I create web and graphic design</h4>
+                  </div>
+            </div>
 
-          <div class="title2">
-              <span class="block"></span>
-              <h1 class="text-color-default hero-title ">{{ $t('HeroSection.title') }}<span></span></h1>
-          </div>
-
-          <div class="role">
-              <div class="block"></div>
-              <p class="use-text-subtitle hero-subtitle">{{ $t('HeroSection.subtitle') }}</p>
-          </div>
-
-          </div>
               <button-v-1 />
 
     <!--           <div class="text box">
@@ -66,3 +70,230 @@ export default {
 }
 </script>
 
+
+
+<style scoped lang="scss">
+
+.hero-wrap{
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  display: block;
+  height: 100vh;
+  .hero-title {
+    text-transform: capitalize;
+    font-size: 58px !important;
+    font-weight: 900;
+    @include breakpoints-down(md) {
+      font-size: 42px !important;
+    }
+  }
+  .inner {
+    height: 100%;
+    .img-box {
+      position: relative;
+      text-align: center;
+      .rocket-img {
+        position: relative;
+        z-index: 1;
+        animation: myAnim 3s ease-out 0s infinite alternate forwards;
+      }
+      .rocket-bg {
+        position: absolute;
+
+      }
+    }
+  }
+
+}
+@keyframes myAnim {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-50px);
+	}
+}
+
+@include breakpoints-up(lg) {
+  #hero
+  {
+    .box {
+      .title2 {
+        width: 100%;
+        position: relative;
+        height: 200px;
+        div.block {
+          width: 0%;
+          height: inherit;
+          background: #ffb510;
+          position: absolute;
+          animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+          display: flex;
+        }
+  
+        h1 {
+          -webkit-animation: mainFadeIn 2s forwards;
+          -o-animation: mainFadeIn 2s forwards;
+          animation: mainFadeIn 2s forwards;
+          animation-delay: 1.6s;
+          opacity: 0;
+       /*    display: flex; */
+          align-items: baseline;
+          position: relative;
+          line-height: 1.3;
+  
+          div.dot {
+            width:0px;
+            height: 0px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            background: #e91e63;
+            -webkit-animation: load 0.6s cubic-bezier(.74, .06, .4, .92) forwards;
+            animation: popIn 0.8s cubic-bezier(.74, .06, .4, .92) forwards;
+            animation-delay: 2s;
+            margin-left: 5px;
+            margin-top: -10px;
+            position: absolute;
+            bottom: 13px;
+            @include right(-12px);
+  
+          }
+        }
+      }
+  
+      .role {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 100px;
+         margin-top: 20px;
+  
+        div.block {
+          width: 0%;
+          height: inherit;
+          background: #e91e63;
+          position: absolute;
+          animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+          animation-delay: 2s;
+          display: flex;
+        }
+  
+        h4 {
+          animation: secFadeIn 2s forwards;
+          animation-delay: 3.2s;
+          opacity: 0;
+        }
+      }
+    }
+  }
+  @keyframes mainBlock {
+    0% {
+      width: 0%;
+      left: 0;
+  
+    }
+    50% {
+      width: 100%;
+      left: 0;
+  
+    }
+    100% {
+      width: 0;
+      left: 100%;
+    }
+  }
+  
+  @keyframes secBlock {
+    0% {
+      width: 0%;
+      left: 0;
+  
+    }
+    50% {
+      width: 100%;
+      left: 0;
+  
+    }
+    100% {
+      width: 0;
+      left: 100%;
+    }
+  }
+  
+  @keyframes mainFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  
+  @keyframes popIn {
+    0% {
+      width: 0px;
+      height: 0px;
+      background: #e9d856;
+      border: 0px solid #ddd;
+      opacity: 0;
+    }
+    50% {
+      width: 10px;
+      height: 10px;
+      background: #e9d856;
+      opacity: 1;
+      bottom: 45px;
+    }
+     65% {
+        width: 7px;
+      height: 7px;
+        bottom: 0px;
+        width: 15px
+     }
+     80% {
+        width: 10px;
+      height: 10px;
+        bottom: 20px
+     }
+    100% {
+      width: 7px;
+      height: 7px;
+      background: #e9d856;
+      border: 0px solid #222;
+      bottom: 13px;
+  
+    }
+  }
+  
+  @keyframes secFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+}
+.name-color span{
+  color: #ffb510 !important;
+}
+
+h4.hero-subtitle{
+  padding: 15px 20px;
+    background: rgba(0, 0, 0, 0.21);
+    font-size: 11px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.71);
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+
+</style>

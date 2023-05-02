@@ -45,7 +45,8 @@ export default {
   plugins: [
     {src: '~/plugins/i18n-config.js' },
     {src: '~/plugins/fontawesome.js', ssr: false},
-    {src: '~/plugins/smooth-scroll', ssr: false},
+    {src: '~/plugins/smooth-scroll.js', ssr: false},
+    {src: '~/plugins/vue-rellax.js', ssr: false},
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

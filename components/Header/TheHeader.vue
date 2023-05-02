@@ -150,7 +150,7 @@
 
       
       <!---------- Start App Bar ---------->
-      <v-app-bar app height="85px" fixed  elevation="0"   style="border-bottom: 1px solid #ffffff1f !important">
+      <v-app-bar app height="85px" fixed  elevation="0">
         <v-container class="pa-0 fill-height">
  <!--          <v-app-bar-nav-icon class="hidden-md-and-up"  @click.stop="drawer = !drawer" /> -->
           <v-app-bar-nav-icon class="hidden-lg-and-up" @click.stop="drawer = !drawer" />
@@ -221,5 +221,12 @@ import Sidebar from './Sidebar.vue';
 <style scoped>
 .logo-box{
   background-color: var(--v-default-base) !important;
+  height: 5.3125rem;
+}
+.theme--dark .v-toolbar.v-app-bar{
+  border-bottom: 1px solid #ffffff1f !important
+}
+.theme--light .v-toolbar.v-app-bar{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
 }
 </style>

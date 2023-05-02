@@ -8,6 +8,8 @@ export default () => {
         "reviewtitle2": "Awesome !!!!",
         "reviewtitle3": "Great Support !!!!",
         "comment": "There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch. ",
+        "Testimonials": "Testimonials",
+        "Testimonials-desc": "What our customers say about us",
       },
       nav: {
         "pages": "Pages",
@@ -21,6 +23,9 @@ export default () => {
         "contacts": "contacts Us",
         "faq": "Faq",
       },
+      SectionTitle: {
+        "Testimonials": "Testimonials",
+      },
       MobileBar: {
         "home": "Home",
         "Testimonials": "Testimonials",
@@ -28,6 +33,10 @@ export default () => {
       HeroSection: {
         "title": "The template your startup needed",
         "subtitle": "A startup is a company or project undertaken by an entrepreneur to seek, develop, and validate a scalable business model.",
+        "hello": "Hey There !",
+        "im": "I'm",
+        "ahmed": "Ahmed Samir",
+        "FrontEnd": "Front End Developer ",
       },
       Portfolio: {
         "title": "My Featured Projects",

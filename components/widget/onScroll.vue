@@ -1,6 +1,5 @@
 <template>
     <v-fab-transition>
-        
       <v-btn
         v-show="showFab"
         v-scroll="checkScroll"
@@ -60,14 +59,14 @@
     position: fixed;
     height: 100px;
     width: 1px;
-    right: -25px;
+    @include right(-10px);
     background-color: rgba(0,0,0,.08);
     z-index: 10;
     transition: all .3s ease;
  .text {
     position: absolute;
     bottom: 100px;
-    left: 20px;
+    @include right(30px);
     font-size: 13px;
     transform: rotate(90deg);
     text-transform: uppercase;
@@ -79,7 +78,7 @@
     width: 1px;
     height: 100px;
     background-color: rgb(255 255 255 / 40%);
-    right: 10px;
+    @include right(50px);
     bottom: -35px;
 }
 
