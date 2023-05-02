@@ -59,7 +59,7 @@
     position: fixed;
     height: 100px;
     width: 1px;
-    @include right(-10px);
+    @include right(-20px);
     background-color: rgba(0,0,0,.08);
     z-index: 10;
     transition: all .3s ease;
