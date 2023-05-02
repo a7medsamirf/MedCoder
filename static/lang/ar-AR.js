@@ -24,7 +24,7 @@ export default () => {
         "faq": " الأسئلة الشائعة",
       },
       SectionTitle: {
-        "Testimonials": "الشهادات - التوصيات",
+        "Testimonials": "أراء عملائنا",
       },
       MobileBar: {
         "home": "الرئيسية",

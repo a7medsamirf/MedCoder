@@ -10,7 +10,7 @@
                 <div class="title2">
                     <div class="block"> </div>
                     <h1 class="text-color-default hero-title ">{{ $t('HeroSection.hello') }} <br>
-                      <span class="name-color">{{ $t('HeroSection.im') }} <span>{{ $t('HeroSection.ahmed') }} </span></span>
+                      <span class="">{{ $t('HeroSection.im') }} <span class="custom-text-color">{{ $t('HeroSection.ahmed') }} </span></span>
                       <br> 
                       <span class="job-title"> {{ $t('HeroSection.FrontEnd') }}</span>
                       <div class="dot"></div>
@@ -281,9 +281,6 @@ export default {
     }
   }
 
-}
-.name-color span{
-  color: #ffb510 !important;
 }
 
 h4.hero-subtitle{

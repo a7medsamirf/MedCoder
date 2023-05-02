@@ -1,15 +1,15 @@
 <template>
-  <div>
+  <div >
     <v-container>
-      <div class="section-title">
+      <div class="section-title py-5">
                                 <h3>Reviews</h3>
-                                <h2>My Clients and <span>Testimonials</span></h2>
+                                <h2>My Clients and <span class="custom-text-color">Testimonials</span></h2>
                                 <p>In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis cursus. Nulla eu mi magna. Etiam suscipit commodo gravida.  </p>
                             </div>
             <div class="section-subtitle rellax" 
                       v-rellax="rellax"
                       data-rellax-percentage="0.5"
-                      data-rellax-speed="7"
+                      data-rellax-speed="2"
                       data-rellax-xs-speed="-4"
                       data-rellax-mobile-speed="3"
                       data-rellax-tablet-speed="-8"
@@ -29,6 +29,14 @@ export default {
       type: String,
       required: true
     },
+    align: {
+      type: String,
+      default: 'left'
+    },
+    dark: {
+      type: Boolean,
+      default: false
+    }
   },
 /*   data() {
     return {
@@ -48,25 +56,23 @@ export default {
 <style lang="scss">
  .section-subtitle {
     position: absolute;
-    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     font-weight: 900;
-    @include right(100px);
+    @include left(150px);
     color: #ccc;
-    right: 0;
-    opacity: 0.15;
-    text-align: left;
+    opacity: 0.1;
+    @include text-align(left);
     top: 0;
     span{
         color: #3a37eb;
-        opacity: 1;
+        opacity: 0.8;
     }
 }
 
 .section-title h3 {
     position: relative;
     padding-bottom: 30px;
-    text-align: left;
+    @include text-align(left);
     font-weight: 600;
     font-size: 14px;
     position: relative;
@@ -75,28 +81,24 @@ export default {
 
 .section-title h2 {
     font-size: 40px;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
     font-weight: 800;
-    color: rgb(50, 58, 69);
     position: relative;
     padding-bottom: 30px;
 }
 
 .section-title p {
-    font-size: 11px;
+    font-size: 12px;
     line-height: 24px;
     padding-bottom: 10px;
     font-weight: 500;
     color: #878C9F;
-    font-family: 'Poppins', sans-serif;
     max-width: 550px;
 }
 
 .section-title {
-    padding: 20px 0 20px 50px;
+    @include padding-left(50px);
     margin-bottom: 50px;
-    text-align: left;
+    @include text-align(left);
     position: relative;
 }
 
@@ -104,7 +106,7 @@ export default {
     content: '';
     position: absolute;
     top: 0;
-    left: -2px;
+    @include left(-2px);
     width: 4px;
     height: 100%;
     background: #FAC921;
@@ -114,11 +116,12 @@ export default {
     content: '';
     position: absolute;
     bottom: 12px;
-    left: 0;
+    @include left(0px);
     width: 50px;
     height: 1px;
     border-bottom: 1px dotted #666;
 }
+
 
 
 </style>

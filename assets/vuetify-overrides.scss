@@ -30,6 +30,7 @@ Style Index
   --dark-section: #1A1C46;
   --dark-card: #1A1C46;
   --white-card: #1A1C46;
+  --custom-text-color: #ffb510
 }
 
 .theme--dark.v-application .section-bg-img {
@@ -139,6 +140,10 @@ a {
 section {
   position: relative;
   overflow: hidden;
+}
+
+.custom-text-color{
+    color: var(--custom-text-color);;
 }
 /*--------------------------------------------------
   [2. Theme color   ]

@@ -4,6 +4,7 @@
    
         <Title
               :SectionTitle="$t('SectionTitle.Testimonials')"
+       
             />
 
         <testimonials-card />
