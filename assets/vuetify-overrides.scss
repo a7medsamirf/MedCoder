@@ -116,12 +116,11 @@ a {
 .py-20 {
   padding-top: 4rem !important;
   padding-bottom: 4rem !important;
-  ;
 
   @include breakpoints-down(md) {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
-    ;
+
   }
 
   @include breakpoints-down(xs) {

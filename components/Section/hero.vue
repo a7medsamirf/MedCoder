@@ -21,9 +21,15 @@
                       <div class="block"></div>
                       <h4 class="use-text-subtitle hero-subtitle">I create web and graphic design</h4>
                   </div>
+                  <button-v-1 />
+                  <div class="scroll-down_btn">
+                                        <a id="scrollDown" class="axil-scrollbown smoth-animation" href="#Projects"><span></span></a>
+                                    </div>
+
+
             </div>
 
-              <button-v-1 />
+       
 
     <!--           <div class="text box">
                 <div class="title">
@@ -54,6 +60,7 @@
               </div>
             </v-col>
           </v-row>
+     
         </v-container>
       </div>
     </div>
@@ -73,6 +80,61 @@ export default {
 
 
 <style scoped lang="scss">
+
+.box.half-hero-wrap{
+  position: relative;
+}
+.scroll-down_btn {
+    position: absolute;
+    @include left(0);
+
+    top: 124%;
+    .axil-scrollbown {
+        display: inline-block;
+        box-sizing: border-box;
+        height: 60px;
+        width: 39px;
+        border: 3px solid #ffffff14;
+        border-radius: 19.5px;
+        position: relative;
+        span {
+            height: 15px;
+            width: 8px;
+            border-radius: 4px;
+            background-color: #ffffff14;
+            display: block;
+            position: absolute;
+            left: 50%;
+            margin-top: 17px;
+            -webkit-animation-name: scrollDown;
+            animation-name: scrollDown;
+            -webkit-animation-duration: 2.2s;
+            animation-duration: 2.2s;
+            -webkit-animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+            animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            margin-left: -4px;
+        }
+    }
+}
+
+@keyframes scrollDown {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+}
+
 
 .hero-wrap{
   background-repeat: no-repeat;

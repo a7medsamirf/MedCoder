@@ -17,3 +17,7 @@ export default {
   components: {Hero, Projects, Testimonials},
 }
 </script>
+
+<style lang="scss" scoped>
+
+</style>

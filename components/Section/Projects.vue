@@ -1,5 +1,8 @@
 <template>
-  <section class="ProjectsCard  py-20" id="Projects">
+  <section class="ProjectsCard  py-20" id="Projects" ref="bottom">
+    <Title 
+    :SectionTitle="$t('SectionTitle.Testimonials')"
+    />
     <v-container fluid>
       <div class="Projects-title">
     <div class="Projects-title-item">
@@ -39,11 +42,13 @@
 <script>
   import imgAPI from '~/static/images/imgAPI'
 import ButtonV1 from '../buttons/button-V1.vue'
+import Title from '../Title/Title.vue'
   export default {
     name: "Projects",
     components: {
       Slick: () => import('vue-slick'),
         ButtonV1,
+        Title,
     },
     data() {
       return {
