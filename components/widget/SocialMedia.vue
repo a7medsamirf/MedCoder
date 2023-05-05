@@ -1,13 +1,6 @@
 <template>
   <div class="SocialMedia text-center my-5">
-
-
-
-
-
-    
     <ul class="pa-0">
-
       <li class="Social-icon" v-for="(social, index) in SocialIcon" :key="index">
         <a class="text-color-default" :href="social.to" target="_blank" :title="social.title">
           <v-icon small>{{ social.Icon }}</v-icon>
