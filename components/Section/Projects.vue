@@ -3,6 +3,7 @@
     <Title 
     :SectionTitle="$t('SectionTitle.Testimonials')"
     />
+    
     <v-container fluid>
       <div class="Projects-title">
     <div class="Projects-title-item">
