@@ -440,24 +440,26 @@ position: absolute;
   transition-delay: 0.3s;
   -webkit-transition: all 400ms linear;
   transition: all 400ms linear;
+
+  .slick-slide {
+    opacity: 0.3;
+    transform: scale(0.9);
+    padding: 0 10px;
+    -webkit-transition: all 400ms linear;
+    transition: all 400ms linear;
+    cursor: pointer;
+    margin-bottom: 50px;
+  }
+
+  .slick-slide.slick-current.slick-active {
+    opacity: 1;
+    -webkit-transform: scale(1.0);
+    -moz-transform: scale(1.0);
+    transform: scale(1.0);
+  }
 }
 
-#Projects .slick-slide {
-  opacity: 0.3;
-  transform: scale(0.9);
-  padding: 0 10px;
-  -webkit-transition: all 400ms linear;
-  transition: all 400ms linear;
-  cursor: pointer;
-  margin-bottom: 50px;
-}
 
-#Projects .slick-slide.slick-current.slick-active {
-  opacity: 1;
-  -webkit-transform: scale(1.0);
-  -moz-transform: scale(1.0);
-  transform: scale(1.0);
-}
 
 
 
