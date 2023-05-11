@@ -1,7 +1,6 @@
 <template>
   <div>
-    <button class="btn-primary-V1"> {{ $t('common.My-Portfolio') }}<i class="arrow"></i></button>
-
+     <NuxtLink class="btn-primary-V1" to="/portfolio"> {{ $t('common.My-Portfolio') }} <i class="arrow"></i></NuxtLink>
   </div>
 </template>
 

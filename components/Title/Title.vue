@@ -109,7 +109,7 @@ export default {
     @include left(-2px);
     width: 4px;
     height: 100%;
-    background: #FAC921;
+    background: var( --custom-text-color);
 }
 
 .section-title h3:before {

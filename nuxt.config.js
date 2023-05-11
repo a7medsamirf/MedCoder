@@ -47,6 +47,8 @@ export default {
     {src: '~/plugins/fontawesome.js', ssr: false},
     {src: '~/plugins/smooth-scroll.js', ssr: false},
     {src: '~/plugins/vue-rellax.js', ssr: false},
+    { src: '~/plugins/lightbox.js', mode: 'client' }
+
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

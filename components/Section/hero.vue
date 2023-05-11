@@ -79,7 +79,25 @@ export default {
 
 
 
-<style scoped lang="scss">
+<style lang="scss">
+ .theme--light {
+  .axil-scrollbown{
+   border: 3px solid rgba(0, 0, 0, 0.21);
+   span{
+    background-color: rgba(0, 0, 0, 0.21);
+   }
+ }
+ }
+
+ .theme--dark {
+  .axil-scrollbown{
+   border: 3px solid rgba(255,255,255,0.12157);
+   span{
+    background-color: rgba(255,255,255,0.12157);
+   }
+ }
+}
+
 
 .box.half-hero-wrap{
   position: relative;
@@ -94,14 +112,12 @@ export default {
         box-sizing: border-box;
         height: 60px;
         width: 39px;
-        border: 3px solid #ffffff14;
         border-radius: 19.5px;
         position: relative;
         span {
             height: 15px;
             width: 8px;
             border-radius: 4px;
-            background-color: #ffffff14;
             display: block;
             position: absolute;
             left: 50%;
@@ -191,7 +207,7 @@ export default {
         div.block {
           width: 0%;
           height: inherit;
-          background: #ffb510;
+          background: var( --custom-text-color);
           position: absolute;
           animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
           display: flex;

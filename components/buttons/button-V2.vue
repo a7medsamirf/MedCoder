@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="rts-btn btn-secondary call-btn ma-5"> Button-V2 </button>
+    <v-button nuxt to="/portfolio" class="rts-btn btn-secondary call-btn ma-5"> Button-V2 </v-button>
   </div>
 </template>
 

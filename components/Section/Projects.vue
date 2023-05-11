@@ -16,8 +16,8 @@
     <slick ref="slick" :options="slickOptions" dir="rtl">
       <div class="Project text-center" v-for="(Projects, index) in ProjectsData" :key="index">
         <div class="Project-block">
-          <v-img class="photo" height="100%" :src="Projects.img" :alt="Projects.title"></v-img>
 
+      <v-img class="photo" height="100%" :src="Projects.img" :alt="Projects.title"></v-img>
           <v-btn class="box-media btn default rounded-0 elevation-0 mt-0 pt-0">
      
             <i class="fa-duotone fa-magnifying-glass fa-lg"></i>
@@ -41,15 +41,17 @@
 </template>
 
 <script>
-  import imgAPI from '~/static/images/imgAPI'
+import imgAPI from '~/static/images/imgAPI'
 import ButtonV1 from '../buttons/button-V1.vue'
 import Title from '../Title/Title.vue'
+import CoolLightBox from "vue-cool-lightbox";
   export default {
     name: "Projects",
     components: {
-      Slick: () => import('vue-slick'),
+        Slick: () => import('vue-slick'),
         ButtonV1,
         Title,
+        CoolLightBox,
     },
     data() {
       return {
@@ -96,7 +98,7 @@ import Title from '../Title/Title.vue'
           infinite: true,
           speed: 800,
           autoplaySpeed: 3000,
-          autoplay: true,
+          autoplay: false,
           responsive: [
           {
               breakpoint: 1200,
