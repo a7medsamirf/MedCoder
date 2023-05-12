@@ -2,6 +2,39 @@ import imgAPI from "~/static/images/imgAPI";
 
 
 export default  {
+  Project:[
+    {
+      "id": 1,
+      "img": "1.jpg",
+      "title": "Startup Project",
+      "link": "https://a7medsamirf.github.io/Startup/ar/",
+    },
+    {
+      "id": 2,
+      "img": "2.png",
+      "title": "Startup Project",
+      "link": "https://a7medsamirf.github.io/Startup/ar/",
+    },
+    {
+      "id": 3,
+      "img": "3.jpg",
+      "title": "Startup Project",
+      "link": "https://a7medsamirf.github.io/Startup/ar/",
+    },
+    {
+      "id": 4,
+      "img": "4.jpg",
+      "title": "Startup Project",
+      "link": "https://a7medsamirf.github.io/Startup/ar/",
+    },
+    {
+      "id": 5,
+      "img": "5.jpg",
+      "title": "Startup Project",
+      "link": "https://a7medsamirf.github.io/Startup/ar/",
+    },
+
+  ],
   review: [
     {
       "id": 1,

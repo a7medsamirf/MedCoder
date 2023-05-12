@@ -38,13 +38,13 @@ export default {
       default: false
     }
   },
-/*   data() {
+  data() {
     return {
       rellax: {
         speed: -2
       }
     }
-  }, */
+  }, 
   methods: {
     destroyRellax() {
       this.rellax = false

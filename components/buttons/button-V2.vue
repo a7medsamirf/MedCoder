@@ -1,7 +1,7 @@
 <template>
   <div>
-    <v-button nuxt to="/portfolio" class="rts-btn btn-secondary call-btn ma-5"> Button-V2 </v-button>
-  </div>
+    <NuxtLink class="rts-btn btn-secondary call-btn ma-5" to="/portfolio"> Button-V2</NuxtLink>
+                 </div>
 </template>
 
 <script>

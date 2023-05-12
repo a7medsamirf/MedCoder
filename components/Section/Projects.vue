@@ -14,11 +14,20 @@
 </div>
 
     <slick ref="slick" :options="slickOptions" dir="rtl">
-      <div class="Project text-center" v-for="(Projects, index) in ProjectsData" :key="index">
+      <div class="Project text-center" v-for="(Project, index) in ProjectsData" :key="index">
         <div class="Project-block">
 
-      <v-img class="photo" height="100%" :src="Projects.img" :alt="Projects.title"></v-img>
-          <v-btn class="box-media btn default rounded-0 elevation-0 mt-0 pt-0">
+                  <v-img
+                    class="photo"
+                    v-if="Project.img"
+                    :src="require(`~/static/images/Projects/${Project.img}`)"
+                    :alt="Project.title"
+                    contain
+                    height="100%" 
+                  >
+                  </v-img>
+
+        <v-btn class="box-media btn default rounded-0 elevation-0 mt-0 pt-0" :to="Project.link" router target="_blank">
      
             <i class="fa-duotone fa-magnifying-glass fa-lg"></i>
           </v-btn>
@@ -27,7 +36,7 @@
         <div class="comment-block">
      
           <v-list-item-title class="Project-title use-text-title5 white-text-bg-dark default mb-1">
-            {{ Projects.title }}
+            {{ Project.title }}
           </v-list-item-title>
 
         </div>
@@ -41,7 +50,7 @@
 </template>
 
 <script>
-import imgAPI from '~/static/images/imgAPI'
+import common from "~/api/common";
 import ButtonV1 from '../buttons/button-V1.vue'
 import Title from '../Title/Title.vue'
 import CoolLightBox from "vue-cool-lightbox";
@@ -55,41 +64,7 @@ import CoolLightBox from "vue-cool-lightbox";
     },
     data() {
       return {
-        item: 0,
-        imgAPI: imgAPI,
-        ProjectsData: [{
-            img: imgAPI.Projectsimg[0],
-            title: 'Startup Project',
-            comment: 'common.lorem',
-            rating: 4.2,
-          },
-          {
-            img: imgAPI.Projectsimg[1],
-            title: 'Startup Project',
-            comment: 'common.lorem',
-            rating: 3.5,
-          },
-          {
-            img: imgAPI.Projectsimg[2],
-            title: 'Jena Doe',
-            comment: 'common.lorem',
-            rating: 4,
-          },
-          {
-            img: imgAPI.Projectsimg[3],
-            title: 'Jena Doe',
-            comment: 'common.lorem',
-            rating: 4,
-          },
-          {
-            img: imgAPI.Projectsimg[4],
-            title: 'Jena Doe',
-            comment: 'common.lorem',
-            rating: 4,
-          },
-
-
-        ],
+        ProjectsData :common.Project,
         slickOptions: {
           slidesToShow: 4,
           centerMode: true,

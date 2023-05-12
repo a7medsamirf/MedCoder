@@ -1,6 +1,6 @@
 <template>
-    <div class="ReviewCard">
-      <slick ref="slick" :options="slickOptions">
+  <div class="ReviewCard pt-16">
+    <slick ref="slick" :options="slickOptions">
             <div class="review text-center"
             v-for="(review, index) in reviews" :key="index">
               <div class="person-block">
@@ -8,7 +8,7 @@
                   <v-img
                   v-if="review.image"
                   :src="require(`~/static/images/avatars/${review.image}`)"
-                  :alt="review.alt"
+                  :alt="review.name"
                   contain
                 ></v-img>
             </v-avatar>
@@ -50,21 +50,23 @@
     
       </slick>
     
-    </div>
-    
-    </template>
-    
-    
+  </div>
+</template>
+
 <script>
 import common from "~/api/common";
-import Title from "~/components/Title/Title";
-    export default {
-      name: "TestimonialsCard",
-      components: {
-        Title,
-        Slick: () => import('vue-slick'),
-      },
-      data(){
+export default {
+  name: "ReviewCard",
+  components: { 
+    Slick: () => import('vue-slick'),
+  },
+  props: {
+  reviews: {
+      type: Array,
+      default: Array,
+    },
+  },
+  data(){
         return {
           reviews :common.review,
           slickOptions: {
@@ -96,11 +98,12 @@ import Title from "~/components/Title/Title";
     
         }
       },
-    
-    }
-    </script>
-    
-    <style lang="scss">
+ 
+}
+</script>
+
+
+<style lang="scss">
     .ReviewCard {
       .comment-block {
         position: relative;
@@ -166,5 +169,4 @@ import Title from "~/components/Title/Title";
       }
     }
 
-    </style>
-    
+</style>
