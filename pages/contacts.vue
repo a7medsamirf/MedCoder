@@ -1,6 +1,6 @@
 <template>
   <div id="contacts">
-
+      Test contacts
   </div>
 </template>
 

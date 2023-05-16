@@ -90,10 +90,12 @@
 
         <v-navigation-drawer  
           class="hidden-md-and-down"
+          
             mini-variant
             mini-variant-width="70"
             permanent
-           fixed :right="$vuetify.rtl"    
+           fixed :right="$vuetify.rtl" 
+           app   
 
         >
         <v-list-item class="py-4 px-1 logo-box">
@@ -150,7 +152,7 @@
 
       
       <!---------- Start App Bar ---------->
-      <v-app-bar app height="85px" fixed  elevation="0">
+      <v-app-bar app height="85px" fixed  elevation="0" :clipped-left="clipped">
         <v-container class="pa-0 fill-height">
  <!--          <v-app-bar-nav-icon class="hidden-md-and-up"  @click.stop="drawer = !drawer" /> -->
           <v-app-bar-nav-icon class="hidden-lg-and-up" @click.stop="drawer = !drawer" />
@@ -203,9 +205,10 @@ import Sidebar from './Sidebar.vue';
         items: [
           {title: 'nav.Home', to: '/'},
           {title: 'nav.Projects', to: ''},
-          {title: 'nav.Services', to: ''},
+          {title: 'nav.Services', to: '/test'},
           {title: 'nav.about-Us', to: ''},
           {title: 'nav.Feedback', to: ''},
+          {title: 'nav.contacts', to: '/contacts'},
         ],
   
       }

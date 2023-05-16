@@ -1,15 +1,11 @@
 <template>
   <v-app :dir="$dir()">
-    <div :class="[ 'g-cursor', { 'g-cursor_hover': hover }, {'g-cursor_hide': hideCursor} ]">
-    <div :style="cursorCircle" class="g-cursor__circle"></div>
-    <div class="g-cursor__point" ref="point" :style="cursorPoint"></div>
-  </div>
-
+  
 
 
   <TheHeader />
 
-  <v-main >
+  <v-main id="wrapper" class="pa-sm-0 pa-lg-16">
 
 <Nuxt />
 
@@ -19,6 +15,13 @@
     <bottom-navigation />
     <TheFooter />
     <on-scroll />
+
+
+    <div :class="[ 'g-cursor', { 'g-cursor_hover': hover }, {'g-cursor_hide': hideCursor} ]">
+    <div :style="cursorCircle" class="g-cursor__circle"></div>
+    <div class="g-cursor__point" ref="point" :style="cursorPoint"></div>
+  </div>
+
   </v-app>
 </template>
 
@@ -173,6 +176,12 @@ data() {
   100% {
     transform: scale(0);
   }
+}
+#wrapper {
+    position: relative;
+    @include padding-left(100px);
+    bottom: 0;
+    z-index: 3;
 }
 
 </style>

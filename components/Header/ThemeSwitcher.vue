@@ -12,7 +12,7 @@
       <v-tooltip v-else bottom>
         <template v-slot:activator="{ on }">
           <v-btn icon v-on="on"  fab @click="toggle_dark_mode">
-            <v-icon size="20" color="yellow">mdi-white-balance-sunny</v-icon>
+            <v-icon size="20" color="warning">mdi-white-balance-sunny</v-icon>
           </v-btn>
         </template>
         <span>Dark Mode Off</span>
