@@ -25,6 +25,21 @@ export default () => {
       },
       SectionTitle: {
         "Testimonials": "أراء عملائنا",
+        "contacts-Us": "أتصل بنا",
+      },
+      contacts: {
+        "Mails": "البريد الإلكتروني ",
+        "Phones": "هواتفنا",
+        "Address": "موقع المكتب",
+        "Working-Hours": "ساعات العمل ",
+        "location": "القاهرة , مصر",
+        "Get-In-Touch": "ابقى على تواصل",
+        "Send-Us-Message": "هل لديك أي أسئلة ؟ أرسل لنا رسالة.",
+        "Your-Name":"الأسم *",
+        "mail": "البريد الإلكترونى",
+        "Subject" : "عنوان الموضوع",
+        "Write-message" : "اكتب رسالتك هنا...",
+        "Send-Message" : " أرسل رسالة ",
       },
       MobileBar: {
         "home": "الرئيسية",

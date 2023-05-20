@@ -5,7 +5,7 @@
 
   <TheHeader />
 
-  <v-main id="wrapper" class="pa-sm-0 pa-lg-16">
+  <v-main id="wrapper" class="">
 
 <Nuxt />
 

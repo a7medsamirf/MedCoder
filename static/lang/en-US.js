@@ -25,6 +25,21 @@ export default () => {
       },
       SectionTitle: {
         "Testimonials": "Testimonials",
+        "contacts-Us": "Contacts Us",
+      },
+      contacts: {
+        "Mails": "Our Emails",
+        "Phones": "Our Phones",
+        "Address": "Office Location",
+        "Working-Hours": "Working Hours",
+        "location": "Cairo , Egypt",
+        "Get-In-Touch": "Keep In Touch",
+        "Send-Us-Message": "Do you have any questions? Send us a message.",
+        "Your-Name":"Your Name *",
+        "mail": "E-Mail",
+        "Subject" : "Subject",
+        "Write-message" : "Write your message here...",
+        "Send-Message" : " Send Message",
       },
       MobileBar: {
         "home": "Home",

@@ -13,10 +13,14 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      { name : 'theme-color', content: '#07AEAF'}
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"},
+      {rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Monoton&display=swap"},
+
     ]
   },
 
@@ -47,7 +51,9 @@ export default {
     {src: '~/plugins/fontawesome.js', ssr: false},
     {src: '~/plugins/smooth-scroll.js', ssr: false},
     {src: '~/plugins/vue-rellax.js', ssr: false},
-    { src: '~/plugins/lightbox.js', mode: 'client' }
+    {src: '~/plugins/lightbox.js', mode: 'client' },
+    {src: '~/plugins/wow.js', ssr: false},
+
 
   ],
 
