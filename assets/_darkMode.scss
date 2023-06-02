@@ -15,6 +15,32 @@
   .text-color-default {
     color: #fff !important;
   }  
+
+/*   h1,
+  h2{
+    background: linear-gradient(to right,#cc00ff,#7000ff);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 5px transparent;
+    filter: drop-shadow(0 38px 55px rgba(204,0,255,1.15));
+}
+ */
+/* h2 span.custom-text-color{
+  width: fit-content;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1;
+  background: -moz-linear-gradient(90deg,#cc00ff,#7000ff);
+  background: -webkit-linear-gradient(90deg,#cc00ff,#7000ff);
+  background: linear-gradient(to right,#cc00ff,#7000ff);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  color: #160f1a;
+  filter: drop-shadow(0 5px 20px rgba(204,0,255,.15));
+} */
 }
 
 /*========== theme light ==========*/
