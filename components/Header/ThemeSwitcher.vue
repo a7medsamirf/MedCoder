@@ -3,7 +3,9 @@
       <v-tooltip v-if="!$vuetify.theme.dark" bottom>
         <template v-slot:activator="{ on }">
           <v-btn icon v-on="on" fab @click="toggle_dark_mode">
-            <v-icon size="20" >mdi-weather-night</v-icon>
+         
+            <i class="fa-duotone fa-moon-stars fa-xl bg-purple-darken-2"></i>
+            
           </v-btn>
         </template>
         <span>Dark Mode On</span>
@@ -12,7 +14,8 @@
       <v-tooltip v-else bottom>
         <template v-slot:activator="{ on }">
           <v-btn icon v-on="on"  fab @click="toggle_dark_mode">
-            <v-icon size="20" color="warning">mdi-white-balance-sunny</v-icon>
+            <i class="fa-solid fa-sun-bright fa-xl warning--text"></i>
+
           </v-btn>
         </template>
         <span>Dark Mode Off</span>

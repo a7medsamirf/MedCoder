@@ -79,7 +79,7 @@ export default {
 
 
 
-<style lang="scss">
+<style lang="scss" scoped>
  .theme--light {
   .axil-scrollbown{
    border: 3px solid rgba(0, 0, 0, 0.21);
