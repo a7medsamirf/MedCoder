@@ -1,100 +1,12 @@
 <template>
     <div>
       <!---------- Start Navigation Drawer ---------->
-  <!--     <v-navigation-drawer class="hidden-md-and-up" v-model="drawer"  fixed :right="$vuetify.rtl"> -->
-    
-
-<!--     <v-row
-          class="fill-height"
-          no-gutters
-        >
-          <v-navigation-drawer
-            dark
-            mini-variant
-            mini-variant-width="56"
-            permanent
-          >
-            <v-list-item class="px-2">
-              <v-list-item-avatar>
-                <v-img src="https://randomuser.me/api/portraits/women/75.jpg"></v-img>
-              </v-list-item-avatar>
-            </v-list-item>
-            
-            
-            <v-divider></v-divider>
-  
-            <v-list
-              dense
-              nav
-            >
-              <v-list-item
-                v-for="item in items"
-                :key="item.title"
-              >
-                <v-list-item-action>
-                  <v-icon>{{ item.icon }}</v-icon>
-                </v-list-item-action>
-  
-                <v-list-item-content>
-                  <v-list-item-title>{{ item.title }}</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list>
-            
-              <v-app-bar-nav-icon  @click.stop="drawer = !drawer" />
-            
-     
-            
-          </v-navigation-drawer>
-  
-                <v-navigation-drawer
-        v-model="drawer"
-       
-        temporary
-      >
-        <v-list-item>
-          <v-list-item-avatar>
-            <v-img src="https://randomuser.me/api/portraits/men/78.jpg"></v-img>
-          </v-list-item-avatar>
-  
-          <v-list-item-content>
-            <v-list-item-title>John Leider</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-  
-        <v-divider></v-divider>
-  
-        <v-list dense>
-          <v-list-item
-            v-for="item in items"
-            :key="item.title"
-            link
-          >
-            <v-list-item-icon>
-              <v-icon>{{ item.icon }}</v-icon>
-            </v-list-item-icon>
-  
-            <v-list-item-content>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
-      </v-navigation-drawer>
-          
-          
-          
-          
-        </v-row>
-   -->
-        
-
         <v-navigation-drawer  
-          class="hidden-md-and-down"
-          
+            class="hidden-md-and-down"
             mini-variant
             mini-variant-width="70"
-            permanent
-           fixed :right="$vuetify.rtl" 
+           fixed 
+           :right="$vuetify.rtl" 
            app   
 
         >
@@ -122,7 +34,9 @@
 
 
      <template v-slot:append>
+      
         <social-media />
+
         <v-tooltip top  color="#3a37eb">
       <template v-slot:activator="{ on, attrs }">
         <div class="pa-0">
@@ -134,16 +48,26 @@
       </template>
       <span>Get in Touch</span>
     </v-tooltip>
-
- 
       </template>
+      
       </v-navigation-drawer>
       
       <v-navigation-drawer
+      :right="$vuetify.rtl" 
         v-model="drawer"
         absolute
         temporary
       >
+      <v-list-item class="pa-3">
+      <div class="logo">
+        <NuxtLink :to="localePath('/')" >
+            <v-img v-if="!$vuetify.theme.dark" width="50" :src="require('static/logo2.png')" ></v-img>
+            <v-img v-else width="50" :src="require('static/logo2.png')" ></v-img>
+          </NuxtLink>
+      </div>
+      <v-spacer></v-spacer>
+      <v-btn class="close-icon" icon @click="drawer = !drawer"> <v-icon>mdi-close</v-icon></v-btn>
+    </v-list-item>
         <sidebar />
       </v-navigation-drawer>
       <!---------- End Navigation Drawer ---------->
@@ -190,8 +114,8 @@
   
   <script>
   
-  import Settings from "~/components/Header/Settings";
-  import ThemeSwitcher from "~/components/Header/ThemeSwitcher";
+import Settings from "~/components/Header/Settings";
+import ThemeSwitcher from "~/components/Header/ThemeSwitcher";
 import SocialMedia from '../widget/SocialMedia.vue';
 import Sidebar from './Sidebar.vue';
   export default {
@@ -233,4 +157,12 @@ import Sidebar from './Sidebar.vue';
 .theme--light .v-toolbar.v-app-bar{
   border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
 }
+.v-navigation-drawer {
+  transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+
+
+
+
 </style>

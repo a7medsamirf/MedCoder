@@ -234,7 +234,9 @@ header.v-toolbar a.v-btn--active:after {
   }
 }
 
-
+.v-overlay:hover {
+  cursor: url(../static/images/cross.png), auto;
+}
 
 /*---------- Sidebar ----------*/
 
@@ -476,4 +478,24 @@ header .v-btn:not(.v-btn--round).v-size--default {
   -webkit-transform: scale(1.0);
   -moz-transform: scale(1.0);
   transform: scale(1.0);
+}
+
+
+
+.v-list .v-list-item {
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
+}
+
+.v-list .v-list-item:hover {
+  @include padding-left(25px);
+  opacity: 1;
+}
+
+.v-list .v-list-item--active {
+  opacity: 1;
+}
+
+.shadow-lg {
+  box-shadow: 0 8px 26px -4px hsla(0, 0%, 8%, .15), 0 8px 9px -5px hsla(0, 0%, 8%, .06) !important;
 }

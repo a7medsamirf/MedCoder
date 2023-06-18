@@ -22,6 +22,11 @@
                       <h4 class="use-text-subtitle hero-subtitle">I create web and graphic design</h4>
                   </div>
                   <button-v-1 />
+
+
+                  <download-button />
+
+
                   <div class="scroll-down_btn">
                                         <a id="scrollDown" class="axil-scrollbown smoth-animation" href="#Projects"><span></span></a>
                                     </div>
@@ -71,8 +76,9 @@
 
 <script>
 import buttonV1 from '../buttons/button-V1.vue'
+import DownloadButton from '../buttons/DownloadButton.vue'
 export default {
-  components: { buttonV1 },
+  components: { buttonV1, DownloadButton },
   name: "Hero"
 }
 </script>

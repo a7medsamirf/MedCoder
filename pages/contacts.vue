@@ -121,6 +121,7 @@ export default {
     },
     data(){
     return {
+      title: this.$t('nav.contacts'),
       imgAPI: imgAPI,
       ContactData: [
         { avatar: imgAPI.svg[0], title: 'Mails', description: 'info@medHouse.com', number: '01',},
@@ -129,7 +130,18 @@ export default {
       ]
     }
   },
-
+  head() {
+  return {
+    title: this.title,
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Home page description'
+      }
+    ]
+  }
+}
 }
 </script>
 
@@ -153,3 +165,5 @@ export default {
     position: relative;
 }
 </style>
+
+

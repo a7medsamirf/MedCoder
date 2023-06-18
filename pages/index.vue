@@ -15,6 +15,23 @@ import Testimonials from '~/components/Section/Testimonials.vue'
 export default {
   name: 'Home',
   components: {Hero, Projects, Testimonials},
+  data() {
+    return {
+      title: this.$t('nav.Home'),
+    }
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Home page description'
+        }
+      ]
+    }
+  }
 }
 </script>
 

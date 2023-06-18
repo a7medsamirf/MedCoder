@@ -1,5 +1,4 @@
 const appUrl = 'https://nuxt-i18n-demo.netlify.app';
-import languages from './static/lang/languages'
 import { theme } from './config/vuetify.options'
 
 export default {
@@ -56,6 +55,7 @@ export default {
 
 
   ],
+  devtools: { enabled: true },
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -89,7 +89,25 @@ export default {
         seo: true,
         // baseUrl: 'https://my-nuxt-app.com',
         lazy: true,
-        locales: languages,
+        langDir: "locales",
+        locales: [
+          {
+            code: 'ar',
+            iso: 'ar-AR',
+            name: 'AR',
+            file: 'ar-AR.js',
+            dir: 'rtl',
+            icon: 'svg/flag-ar.svg'
+          },
+          {
+            code: 'en',
+            iso: 'en-US',
+            name: 'EN',
+            file: 'en-US.js',
+            dir: 'ltr',
+            icon: 'svg/flag-en.svg'
+          },
+        ],
         defaultLocale: 'en',
         vueI18n: {
           fallbackLocale: 'en'
@@ -99,7 +117,6 @@ export default {
           cookieKey: 'i18n_redirected',
           alwaysRedirect: true
         },
-        langDir: 'static/lang/'
     
       },
     
@@ -136,7 +153,7 @@ export default {
       lang: 'en'
     }
   },
-
+  devtools: { enabled: false },
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {
     markdown: {
