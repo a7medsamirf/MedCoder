@@ -77,7 +77,7 @@
 
       
       <!---------- Start App Bar ---------->
-      <v-app-bar app height="85px" fixed  elevation="0" :clipped-left="clipped">
+      <v-app-bar app height="85px" fixed  elevation="0" >
         <v-container class="pa-0 fill-height">
  <!--          <v-app-bar-nav-icon class="hidden-md-and-up"  @click.stop="drawer = !drawer" /> -->
           <v-app-bar-nav-icon class="hidden-lg-and-up" @click.stop="drawer = !drawer" />
@@ -159,6 +159,22 @@ import Sidebar from './Sidebar.vue';
 }
 .v-navigation-drawer {
   transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+
+.v-overlay {
+    align-items: center;
+    border-radius: inherit;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    transition: 0.5s cubic-bezier(0.25, 0.8, 0.5, 1), z-index 1ms !important;
+
 }
 
 

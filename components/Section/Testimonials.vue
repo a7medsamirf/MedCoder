@@ -1,11 +1,6 @@
 <template>
     <section id="Testimonials" class="ReviewCard pt-16">
-   
-        <Title
-              :SectionTitle="$t('SectionTitle.Testimonials')"
-       
-            />
-
+        <Title :SectionTitle="$t('SectionTitle.Testimonials')" />
             <slick ref="slick" :options="slickOptions">
             <div class="review text-center"
             v-for="(review, index) in reviews" :key="index">
@@ -43,7 +38,7 @@
                   ></v-rating>
 
                 </div>
-                    <v-list-item-subtitle class="use-text-paragraph" v-text="$t(review.comment)"/>
+                    <v-list-item-subtitle class="use-text-paragraph" v-text="review.comment"/>
                   </v-list-item-content>
                 </v-list-item>
               </v-card>

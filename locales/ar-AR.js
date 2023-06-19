@@ -17,6 +17,8 @@ export default () => {
         "Projects": "المشاريع",
         "solutions": "الحلول",
         "about-Us": "من نحن",
+        "news": "الأخبار",
+        "pricing": "خطط الأسعار",
         "Services": "الخدمات",
         "Feedback": "أنطباع",
         "dashboard": "لوحة تحكم المستخدم ",

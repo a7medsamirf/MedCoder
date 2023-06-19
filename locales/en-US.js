@@ -17,6 +17,8 @@ export default () => {
         "Projects": "Projects",
         "solutions": "Solutions",
         "about-Us": "about Us ",
+        "news": "News",
+        "pricing": "Pricing",
         "Services": "Services",
         "Feedback": "Feedback",
         "dashboard": "User Dashboard",
