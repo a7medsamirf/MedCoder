@@ -95,7 +95,7 @@
         position: absolute;
         text-transform: uppercase;
         font-weight: 900;
-        @include left(150px);
+/*         @include left(150px); */
         color: #ccc;
         opacity: 0.1;
         @include text-align(left);

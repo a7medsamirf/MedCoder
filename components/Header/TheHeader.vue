@@ -57,6 +57,7 @@
         v-model="drawer"
         absolute
         temporary
+        width="100%"
       >
       <v-list-item class="pa-3">
       <div class="logo">
@@ -68,7 +69,11 @@
       <v-spacer></v-spacer>
       <v-btn class="close-icon" icon @click="drawer = !drawer"> <v-icon>mdi-close</v-icon></v-btn>
     </v-list-item>
+
+
         <sidebar />
+
+
       </v-navigation-drawer>
       <!---------- End Navigation Drawer ---------->
   
@@ -179,6 +184,20 @@ import Sidebar from './Sidebar.vue';
 
 
 
+.v-overlay__scrim{
+    position: fixed;
+    background: rgba(0,0,0,.5);
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    right: 100%;
+    top: 0;
+    transition: right .5s ease;
+}
+.v-overlay__scrim{
+    right: 0!important;
+    transition: right .5s ease!important;
+}
 
 
 </style>

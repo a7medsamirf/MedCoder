@@ -1,7 +1,7 @@
 <template>
     <div>
       <!---------- Start Navigation Drawer ---------->
-    <v-list nav dense >
+    <v-list  dense class="menu">
         <div v-for="(link, i) in links" :key="i">
           <v-list-item
             v-if="!link.subLinks"
@@ -72,3 +72,19 @@
   
   }
   </script>
+
+  <style lang="scss" scoped>
+  .v-navigation-drawer--open  .v-list.menu {
+    opacity: 1;
+    transform: translateY(0);
+}
+  
+  .v-list.menu {
+    opacity: 0;
+    -ms-transform: translateY(-100px);
+    transform: translateY(-100px);
+    transition: transform 0.5s ease 0.25s, opacity 0.5s ease 0.25s;
+}
+
+</style>
+
