@@ -15,8 +15,10 @@ Style Index
     1. Basic Setup
     2. Theme color
     3. Navigation Drawer
+       - Menu Animation 
     4. Hero Section
     5. Projects Section
+
 */
 /*--------------------------------------------------
   [1. Start Basic Setup ]
@@ -50,7 +52,7 @@ Style Index
 body {
   text-transform: capitalize;
   letter-spacing: normal;
-
+  cursor: none;
 }
 
 html {
@@ -75,6 +77,7 @@ li {
 a {
   text-decoration: none;
   font-weight: 500;
+  cursor: none !important;
 }
 
 .v-chip--label {
@@ -237,6 +240,13 @@ header.v-toolbar a.v-btn--active:after {
 .v-overlay:hover {
   cursor: url(../static/images/cross.png), auto;
 }
+
+/*---------- Menu Animation  ----------*/
+
+
+
+
+
 
 /*---------- Sidebar ----------*/
 

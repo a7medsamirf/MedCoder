@@ -3,46 +3,47 @@
     <input type="checkbox" id="main-navigation-toggle" class="btn btn--close" title="Toggle main navigation" />
 <label for="main-navigation-toggle">
   <span></span>
+  
 </label>
 
 <nav id="main-navigation" class="nav-main">
   <ul class="menu">
-    <li class="menu__item">
-      <a class="menu__link" href="#0">Home</a>
+    <li class="menu-item">
+      <a class="menu-link" href="#0">Home</a>
     </li>
-    <li class="menu__item">
-      <a class="menu__link" href="#0">About</a>
+    <li class="menu-item">
+      <a class="menu-link" href="#0">About</a>
     </li>
-    <li class="menu__item">
-      <a class="menu__link" href="#0">Clients</a>
+    <li class="menu-item">
+      <a class="menu-link" href="#0">Clients</a>
       <ul class="submenu">
-        <li class="menu__item">
-          <a class="menu__link" href="#0">Burger King</a>
+        <li class="menu-item">
+          <a class="menu-link" href="#0">Burger King</a>
         </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#0">Southwest Airlines</a>
+        <li class="menu-item">
+          <a class="menu-link" href="#0">Southwest Airlines</a>
         </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#0">Levi Strauss</a>
+        <li class="menu-item">
+          <a class="menu-link" href="#0">Levi Strauss</a>
         </li>
       </ul>
     </li>
-    <li class="menu__item">
-      <a class="menu__link" href="#0">Services</a>
+    <li class="menu-item">
+      <a class="menu-link" href="#0">Services</a>
       <ul class="submenu">
-        <li class="menu__item">
-          <a class="menu__link" href="#0">Print Design</a>
+        <li class="menu-item">
+          <a class="menu-link" href="#0">Print Design</a>
         </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#0">Web Design</a>
+        <li class="menu-item">
+          <a class="menu-link" href="#0">Web Design</a>
         </li>
-        <li class="menu__item">
-          <a class="menu__link" href="#0">Mobile App Development</a>
+        <li class="menu-item">
+          <a class="menu-link" href="#0">Mobile App Development</a>
         </li>
       </ul>
     </li>
-    <li class="menu__item">
-      <a class="menu__link" href="#0">Contact</a>
+    <li class="menu-item">
+      <a class="menu-link" href="#0">Contact</a>
     </li>
   </ul>
 </nav>
@@ -111,7 +112,7 @@ export default {
     bottom: 0;
   }
   
-  .menu__item {
+  .menu-item {
     opacity: 0;
     transform: translateX(-1rem);
     transition: 
@@ -156,7 +157,7 @@ export default {
         right: 0;
         transition: transform calc(var(--td) * 3) var(--te);
         top: 0;
-        width: calc(100% - 1rem);
+  /*       width: calc(100% - 1rem); */
       }
 
       &::before {
@@ -202,7 +203,7 @@ export default {
     transition-delay: calc(var(--td) / 2);
   }
   
-  .menu__item {
+  .menu-item {
     opacity: 1;
     transform: translateX(0);
     transition: 
@@ -211,7 +212,7 @@ export default {
   }
   
   @for $i from 1 through 5 {
-    .menu__item:nth-child(#{$i}) {
+    .menu-item:nth-child(#{$i}) {
       transition-delay: calc(var(--td) * 2 * (#{$i} * 0.25));
       z-index: $i * -1;
     }
@@ -224,12 +225,10 @@ export default {
 
 .menu {
   position: relative;
-  text-align: center;
   z-index: 1;
-  
-  > .menu__item {
+  > .menu-item {
     font-family: var(--font-family-secondary);
-    font-size: 10vmin;
+    font-size: 7vmin;
   }
 }
 
@@ -247,13 +246,13 @@ export default {
   visibility: hidden;
   z-index: 2;
   
-  .menu__item {
+  .menu-item {
     font-family: var(--font-family-primary);
     font-size: 3.5vmin;
     width: 100%;
   }
   
-  .menu__link {
+  .menu-link {
     color: var(--color-secondary);
     text-shadow:
       1px 1px 0 var(--color-primary),
@@ -270,11 +269,11 @@ export default {
 // Menu item
 // ================================
 
-.menu__item {
+.menu-item {
   display: block;
   position: relative;
   
-  &:hover .menu__link {
+  &:hover .menu-link {
     &::before,
     &::after {
       animation: blink 1s var(--td) steps(1, end) forwards infinite;
@@ -302,7 +301,7 @@ export default {
 // Menu link
 // ================================
 
-.menu__link {
+.menu-link {
   color: var(--color-dark);
   display: inline-block;
   font-weight: normal;
@@ -343,27 +342,26 @@ export default {
 // Menu item hover styles
 // ================================
 
-.menu:not(:focus-within):not(:hover) .menu__item {
-  .menu__link { 
+.menu:not(:focus-within):not(:hover) .menu-item {
+  .menu-link { 
     opacity: 1;
     transform: translate(0, 0);
   }
 }
 
-.menu__item {
+.menu-item {
   --pull: 30%;
-  
-  .menu__link {
+  .menu-link {
     opacity: 0.25;
     transition-duration: calc(var(--td) * 3);
     transform: translate(0, calc(var(--pull) * -1));
   }
   
-  .submenu .menu__link {
+  .submenu .menu-link {
     opacity: 1;
   }
   
-  &:hover > .menu__link {
+  &:hover > .menu-link {
     color: var(--color-secondary);
     opacity: 1;
     transform: translate(0, 0);
@@ -374,7 +372,7 @@ export default {
     }
   }
   
-  &:hover ~ .menu__item > .menu__link {
+  &:hover ~ .menu-item > .menu-link {
     transition-duration: calc(var(--td) * 3);
     transform: translate(0, var(--pull));
   }

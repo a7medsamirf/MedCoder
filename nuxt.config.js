@@ -3,7 +3,7 @@ import { theme } from './config/vuetify.options'
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  ssr: true,
+  ssr: false,
   target: 'static',
   head: {
     titleTemplate: '%s - MedCoder',
@@ -50,7 +50,7 @@ export default {
     {src: '~/plugins/fontawesome.js', ssr: false},
     {src: '~/plugins/smooth-scroll.js', ssr: false},
     {src: '~/plugins/vue-rellax.js', ssr: false},
-    {src: '~/plugins/lightbox.js', mode: 'client' },
+   {src: '~/plugins/lightbox.js', mode: 'client' },
     {src: '~/plugins/wow.js', ssr: false},
 
 
