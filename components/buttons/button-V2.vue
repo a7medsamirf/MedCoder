@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtLink class="rts-btn btn-secondary call-btn ma-5" to="/portfolio"> Button-V2</NuxtLink> 
+    <NuxtLink data-cursor-hover class="rts-btn btn-secondary call-btn ma-5" to="/portfolio"> Button-V2</NuxtLink>
     </div>
 </template>
 

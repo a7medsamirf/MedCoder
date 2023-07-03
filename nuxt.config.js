@@ -33,6 +33,8 @@ export default {
     background: '#fff'
   }, */
 
+  loading: '~/components/widget/LoadingBar.vue',
+
   transition: 'slide-bottom',
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -50,8 +52,9 @@ export default {
     {src: '~/plugins/fontawesome.js', ssr: false},
     {src: '~/plugins/smooth-scroll.js', ssr: false},
     {src: '~/plugins/vue-rellax.js', ssr: false},
-   {src: '~/plugins/lightbox.js', mode: 'client' },
+    {src: '~/plugins/lightbox.js', mode: 'client' },
     {src: '~/plugins/wow.js', ssr: false},
+    {src: '~/plugins/vue-cursor-fx.js', mode: 'client'},
 
 
   ],
@@ -117,9 +120,9 @@ export default {
           cookieKey: 'i18n_redirected',
           alwaysRedirect: true
         },
-    
+
       },
-    
+
     /*
    ** Sitemap config
    */

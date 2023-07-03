@@ -1,13 +1,13 @@
 <template>
   <div>
     <!---------- Start Navigation Drawer ---------->
-      <v-navigation-drawer  
+      <v-navigation-drawer
           class="hidden-md-and-down"
           mini-variant
           mini-variant-width="70"
-         fixed 
-         :right="$vuetify.rtl" 
-         app   
+         fixed
+         :right="$vuetify.rtl"
+         app
 
       >
       <v-list-item class="py-4 px-1 logo-box">
@@ -16,7 +16,7 @@
           <v-img v-if="!$vuetify.theme.dark" width="50" :src="require('static/logo2.png')" ></v-img>
           <v-img v-else width="50" :src="require('static/logo2.png')" ></v-img>
         </NuxtLink>
-  
+
         </div>
         <v-spacer></v-spacer>
         <v-btn class="close-icon" icon @click="drawer = !drawer"> <v-icon>mdi-close</v-icon></v-btn>
@@ -26,7 +26,7 @@
       <v-list>
         <v-list-item>
         <v-app-bar-nav-icon  @click.stop="drawer = !drawer" />
-        
+
         </v-list-item>
       </v-list>
 
@@ -34,7 +34,7 @@
 
 
    <template v-slot:append>
-    
+
       <social-media />
 
       <v-tooltip top  color="#3a37eb">
@@ -49,58 +49,80 @@
     <span>Get in Touch</span>
   </v-tooltip>
     </template>
-    
+
     </v-navigation-drawer>
-    
+
     <v-navigation-drawer
-    :right="$vuetify.rtl" 
+    :right="$vuetify.rtl"
       v-model="drawer"
-      absolute
       temporary
-      width="100%"
+      width="50vw"
+      fixed
+      class="nav-main"
     >
-    <v-list-item class="pa-3">
+    <v-list-item class="pa-5">
+        <div class="logo">
+          <NuxtLink :to="localePath('/')" >
+          <v-img v-if="!$vuetify.theme.dark" width="50" :src="require('static/logo2.png')" ></v-img>
+          <v-img v-else width="50" :src="require('static/logo2.png')" ></v-img>
+        </NuxtLink>
 
-    <v-spacer></v-spacer>
-    <v-btn class="close-icon" icon @click="drawer = !drawer"> <v-icon>mdi-close</v-icon></v-btn>
-  </v-list-item>
-
-  <ul class="menu" >
-  <li class="menu-item">
-    <a class="menu-link" href="#0">
-      <sup>01</sup>
-      <div class="item-label">Home</div>
-    </a>
-  </li>
-  <li class="menu-item">
-    <a class="menu-link" href="#0">
-      <sup>02</sup>
-      <div class="item-label">About</div>
-    </a>
-  </li>
-
-  <li class="menu-item">
-    <a class="menu-link" href="#0">
-      <sup>03</sup>
-      <div class="item-label">Clients</div>
-    </a>
-    <ul class="submenu">
-      <li class="menu-item">
-        <a class="menu-link" href="#0">Burger King</a>
-      </li>
-      <li class="menu-item">
-        <a class="menu-link" href="#0">Southwest Airlines</a>
-      </li>
-      <li class="menu-item">
-        <a class="menu-link" href="#0">Levi Strauss</a>
-      </li>
-    </ul>
-  </li>
+        </div>
+        <v-spacer></v-spacer>
+        <v-btn class="close-icon" icon @click="drawer = !drawer"> <v-icon>mdi-close</v-icon></v-btn>
+      </v-list-item>
+        <v-divider class="white--text"></v-divider>
+        <ul class="menu pa-16" >
+              <li class="menu-item" v-for="(link, i) in links" :key="i">
+                <NuxtLink  class="menu-link"
+                v-if="!link.subLinks"
+                :to="localePath(link.to)"
+                active-class="primary--text"
+                exact
+                >
+                  <sup>{{ link.number }}</sup>
+                  <div class="item-label">{{ $t(link.title) }}</div>
+                </NuxtLink>
+              </li>
 
 
-</ul>
+            </ul>
 
 
+<!--
+    <v-list  dense class="menu pa-16">
+        <div class="menu-item" v-for="(link, i) in links" :key="i">
+          <v-list-item
+            v-if="!link.subLinks"
+            :to="localePath(link.to)"
+            active-class="primary--text"
+            class="menu-link v-list-item"
+            exact
+          >
+          <sup>{{ link.number }}</sup>
+            <v-list-item-title class="item-label" v-text="$t(link.title)" />
+          </v-list-item>
+        </div>
+
+      </v-list>
+
+ -->
+
+<template v-slot:append>
+  <v-divider class="white--text"></v-divider>
+  <v-list-item class="pa-5">
+
+        <v-badge bottom color="error" overlap offset-x="25" offset-y="30">
+        <v-icon class="mr-3">mdi-shopping-outline</v-icon>
+        </v-badge>
+        <h5>Items</h5>
+        <v-spacer></v-spacer>
+        <v-btn class="close-icon" icon ><v-icon>mdi-close</v-icon></v-btn>
+        </v-list-item>
+        <v-divider class="white--text"></v-divider>
+
+
+          </template>
 
     </v-navigation-drawer>
     <!---------- End Navigation Drawer ---------->
@@ -108,7 +130,7 @@
 
 
 
-    
+
     <!---------- Start App Bar ---------->
     <v-app-bar app height="85px" fixed  elevation="0" >
       <v-container class="pa-0 fill-height">
@@ -150,9 +172,9 @@
 import Settings from "~/components/Header/Settings";
 import ThemeSwitcher from "~/components/Header/ThemeSwitcher";
 import SocialMedia from '../widget/SocialMedia.vue';
-import Sidebar from './Sidebar.vue';
+
 export default {
-  components: {ThemeSwitcher, Settings,Sidebar, SocialMedia},
+  components: {ThemeSwitcher, Settings, SocialMedia},
   name: "TheHeader",
   data () {
     return {
@@ -160,13 +182,13 @@ export default {
       mini: true,
       drawer: null,
       Lang : '',
-      items: [
-        {title: 'nav.Home', to: '/'},
-        {title: 'nav.Projects', to: ''},
-        {title: 'nav.Services', to: '/test'},
-        {title: 'nav.about-Us', to: ''},
-        {title: 'nav.Feedback', to: ''},
-        {title: 'nav.contacts', to: '/contacts'},
+      links: [
+        {title: 'nav.Home', to: '/', number: '01'},
+        {title: 'nav.Projects', to: '', number: '02'},
+        {title: 'nav.Services', to: '/test', number: '03'},
+        {title: 'nav.about-Us', to: '', number: '04'},
+        {title: 'nav.Feedback', to: '', number: '05'},
+        {title: 'nav.contacts', to: '/contacts', number: '06'},
       ],
 
     }
@@ -227,36 +249,5 @@ transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: right .5s ease!important;
 }
 
-
-.menu-item a:hover sup {
-  -webkit-transform: translateX(15px);
-  -ms-transform: translateX(15px);
-  transform: translateX(15px);
-  opacity: 0;
-}
-
-.menu-item a sup {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 700;
-  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
-  transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
-  -o-transition: transform 0.5s ease, opacity 0.5s ease;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  transition: transform 0.5s ease, opacity 0.5s ease, -webkit-transform 0.5s ease;
-  vertical-align: text-top;
-  color: #fff;
-}
-
-
-.menu-item a .item-label {
-  position: relative;
-  display: inline-block;
-  white-space: nowrap;
-  transition: color .2s, transform .5s ease, -webkit-transform .5s ease;
-  -webkit-text-stroke-color: #fff;
-  -webkit-text-stroke-width: 1px;
-  color: transparent;
-}
 
 </style>
