@@ -8,7 +8,7 @@
             
           </v-btn>
         </template>
-        <span>Dark Mode On</span>
+        <span>{{ $t('common.Dark-Mode') }}</span>
       </v-tooltip>
   
       <v-tooltip v-else bottom>
@@ -18,7 +18,7 @@
 
           </v-btn>
         </template>
-        <span>Dark Mode Off</span>
+        <span>{{ $t('common.Dark-Mode') }}</span>
       </v-tooltip>
   
     </v-fade-transition>

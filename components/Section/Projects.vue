@@ -26,11 +26,11 @@
                     height="100%" 
                   >
                   </v-img>
-
-        <v-btn class="box-media btn default rounded-0 elevation-0 mt-0 pt-0" :to="Project.link" router target="_blank">
+                  
+        <NuxtLink class="box-media default rounded-0 elevation-0 mt-0 pt-0" :to="Project.link" router target="_blank">
      
             <i class="fa-duotone fa-magnifying-glass fa-lg"></i>
-          </v-btn>
+          </NuxtLink>
 
         </div>
         <div class="comment-block">

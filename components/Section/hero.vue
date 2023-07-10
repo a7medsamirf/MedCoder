@@ -174,11 +174,9 @@ export default {
   height: 100vh;
   .hero-title {
     text-transform: capitalize;
-    font-size: 58px !important;
+    font-size: 7vmin !important;
     font-weight: 900;
-    @include breakpoints-down(md) {
-      font-size: 42px !important;
-    }
+
   }
   .inner {
     height: 100%;
@@ -215,7 +213,7 @@ export default {
       .title2 {
         width: 100%;
         position: relative;
-        height: 200px;
+        height: 100%;
         div.block {
           width: 0%;
           height: inherit;
@@ -261,9 +259,7 @@ export default {
         position: relative;
         display: flex;
         align-items: center;
-        height: 100px;
-         margin-top: 20px;
-  
+        height: 100%;  
         div.block {
           width: 0%;
           height: inherit;

@@ -10,6 +10,7 @@ export default () => {
         "comment": "There’s no other program that walks you through exactly what you need to know to start an online store fast, written by someone who has built several 7-figure ecommerce businesses from scratch. ",
         "Testimonials": "Testimonials",
         "Testimonials-desc": "What our customers say about us",
+        "Dark-Mode": "Dark Mode",
       },
       nav: {
         "pages": "Pages",

@@ -11,14 +11,14 @@
 ::-moz-selection,
 -webkit-::-moz-selection {
   background-color: $dark-surface;
-  color: $palette-text-white !important;
+  color: $palette-common-white !important;
 }
 
 ::selection,
 -webkit-::selection,
 ::-moz-selection {
   background-color: $dark-surface;
-  color: $palette-text-white !important;
+  color: $palette-common-white !important;
 }
 
 

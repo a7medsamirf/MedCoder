@@ -56,15 +56,15 @@
     :right="$vuetify.rtl"
       v-model="drawer"
       temporary
-      width="50vw"
+      width="600px"
       fixed
       class="nav-main"
     >
     <v-list-item class="pa-5">
         <div class="logo">
           <NuxtLink :to="localePath('/')" >
-          <v-img v-if="!$vuetify.theme.dark" width="50" :src="require('static/logo2.png')" ></v-img>
-          <v-img v-else width="50" :src="require('static/logo2.png')" ></v-img>
+          <v-img v-if="!$vuetify.theme.dark" width="170px" :src="require('static/sidebar-dark.png')" ></v-img> 
+          <v-img v-else width="170px" :src="require('static/sidebar-white.png')" ></v-img>
         </NuxtLink>
 
         </div>
@@ -72,7 +72,7 @@
         <v-btn class="close-icon" icon @click="drawer = !drawer"> <v-icon>mdi-close</v-icon></v-btn>
       </v-list-item>
         <v-divider class="white--text"></v-divider>
-        <ul class="menu pa-16" >
+        <ul class="menu pa-10" >
               <li class="menu-item" v-for="(link, i) in links" :key="i">
                 <NuxtLink  class="menu-link"
                 v-if="!link.subLinks"
@@ -144,7 +144,7 @@
       </div>
         <v-spacer />
 
-
+<!-- 
         <v-toolbar-items class="hidden-md-and-down DesktopNav scrollactive-item" v-for="(item, i) in items" :key="i">
           <v-btn text
                  v-if="!item.subitems"
@@ -154,7 +154,7 @@
           </v-btn>
 
         </v-toolbar-items>
-
+ -->
 
 
     <Settings />

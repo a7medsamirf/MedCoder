@@ -84,6 +84,16 @@
   }
 }
 
+///  text color
+@mixin title-text-color {
+  .theme--light & {
+    color: $dark-surface
+  }
+  .theme--dark & {
+    color: $palette-common-white
+  }
+}
+
 /// title text color bg dark
 @mixin white-text-color-bg-dark {
   .theme--light & {
@@ -101,6 +111,16 @@
   }
   .theme--dark & {
     color: $dark-description-text
+  }
+}
+
+/// webkit-text-stroke-color
+@mixin webkit-text-stroke-color {
+  .theme--light & {
+    -webkit-text-stroke-width: $webkit-text-stroke-color;
+  }
+  .theme--dark & {
+    -webkit-text-stroke-color: $dark-surface;
   }
 }
 

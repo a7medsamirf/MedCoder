@@ -482,7 +482,7 @@ header .v-btn:not(.v-btn--round).v-size--default {
 #Projects .slick-slide {
   opacity: 0.3;
   transform: scale(0.9);
-  padding: 0 10px;
+  padding: 0 ;
   -webkit-transition: all 400ms linear;
   transition: all 400ms linear;
   cursor: pointer;
@@ -520,16 +520,6 @@ header .v-btn:not(.v-btn--round).v-size--default {
 
 
 @import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One|Roboto+Mono:400,700&display=swap');
-
-:root {
-  --color-primary: #18181A;
-  --color-secondary: #75757C;
-  --color-dark: #364C62;
-  --color-light: #F5F5F5;
-  --td: 150ms;
-  --te: cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
 
 // ================================
 // Main navigation
@@ -570,8 +560,8 @@ header .v-btn:not(.v-btn--round).v-size--default {
   .menu-item {
     transform: translateX(-1rem);
     transition:
-      opacity var(--td) var(--te),
-      transform var(--td) var(--te);
+      opacity 150ms cubic-bezier(0.215, 0.61, 0.355, 1),
+      transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 }
 
@@ -583,25 +573,23 @@ header .v-btn:not(.v-btn--round).v-size--default {
   opacity: 0;
   position: fixed;
   top: -100%;
-
   ~ label {
     cursor: pointer;
     position: fixed;
     right: 1rem;
     top: 1rem;
     z-index: 100;
-
     span {
       display: block;
       height: 2rem;
       padding: 0.5rem;
       position: relative;
-      transition: transform calc(var(--td) * 3) var(--te);
+      transition: transform calc(150ms * 3) cubic-bezier(0.215, 0.61, 0.355, 1);
       width: 2rem;
 
       &::before,
       &::after {
-        background-color: var(--color-dark);
+        background-color: #364C62;
         bottom: 0;
         content: '';
         height: 4px;
@@ -609,7 +597,7 @@ header .v-btn:not(.v-btn--round).v-size--default {
         margin: auto;
         position: absolute;
         right: 0;
-        transition: transform calc(var(--td) * 3) var(--te);
+        transition: transform calc(150ms * 3) cubic-bezier(0.215, 0.61, 0.355, 1);
         top: 0;
         width: calc(100% - 1rem);
       }
@@ -654,20 +642,20 @@ header .v-btn:not(.v-btn--round).v-size--default {
   }
 
   &::after {
-    transition-delay: calc(var(--td) / 2);
+    transition-delay: calc(150ms / 2);
   }
 
   .menu-item {
     opacity: 1;
     transform: translateX(0);
     transition:
-      opacity calc(var(--td) * 2) var(--te),
-      transform calc(var(--td) * 2) var(--te);
+      opacity calc(150ms * 2) cubic-bezier(0.215, 0.61, 0.355, 1),
+      transform calc(150ms * 2) cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
   @for $i from 1 through 5 {
     .menu-item:nth-child(#{$i}) {
-      transition-delay: calc(var(--td) * 2 * (#{$i} * 0.25));
+      transition-delay: calc(150ms * 2 * (#{$i} * 0.25));
       z-index: $i * -1;
     }
   }
@@ -693,17 +681,16 @@ header .v-btn:not(.v-btn--round).v-size--default {
 .menu-item {
   display: block;
   position: relative;
-
   &:hover .menu-link {
     &::before,
     &::after {
-      animation: blink 1s var(--td) steps(1, end) forwards infinite;
+      animation: blink 1s 150ms steps(1, end) forwards infinite;
       transform: translateX(calc(100% - 0.5rem));
-      transition-duration: calc(var(--td) * 3);
+      transition-duration: calc(150ms * 3);
     }
 
     &::after {
-      transition-delay: calc(var(--td) / 2);
+      transition-delay: calc(150ms / 2);
     }
   }
 
@@ -711,9 +698,9 @@ header .v-btn:not(.v-btn--round).v-size--default {
     opacity: 1;
     transform: translateY(0);
     transition:
-      transform calc(var(--td) * 2) calc(var(--td) * 3) var(--te),
-      opacity calc(var(--td) * 2) calc(var(--td) * 3) var(--te),
-      visibility 0s calc(var(--td) * 3);
+      transform calc(150ms * 2) calc(150ms * 3) cubic-bezier(0.215, 0.61, 0.355, 1),
+      opacity calc(150ms * 2) calc(150ms * 3) cubic-bezier(0.215, 0.61, 0.355, 1),
+      visibility 0s calc(150ms * 3);
     visibility: visible;
   }
 }
@@ -738,13 +725,13 @@ header .v-btn:not(.v-btn--round).v-size--default {
   &::before,
   &::after {
     content: '';
-    background-color: var(--color-light);
+    background-color: #F5F5F5;
     height: 50%;
     left: 0;
     position: absolute;
     transform: translateX(-110%);
     transform-origin: 0 50%;
-    transition: transform 0s var(--te);
+    transition: transform 0s cubic-bezier(0.215, 0.61, 0.355, 1);
     width: 100%;
     z-index: -1;
   }
@@ -770,30 +757,33 @@ header .v-btn:not(.v-btn--round).v-size--default {
 }
 
 .menu-item {
-  --pull: 30%;
   .menu-link {
     opacity: 0.25;
-    transition-duration: calc(var(--td) * 3);
-    transform: translate(0, calc(var(--pull) * -1));
-  }
+    transition-duration: calc(150ms * 3);
+    transform: translate(0, calc(30% * -1));
+    -webkit-transform: translate(0, calc(30% * -1));
+    -moz-transform: translate(0, calc(30% * -1));
+    -ms-transform: translate(0, calc(30% * -1));
+    -o-transform: translate(0, calc(30% * -1));
+}
 
   .submenu .menu-link {
     opacity: 1;
   }
 
   &:hover > .menu-link {
-    color: var(--color-secondary);
+    color: #75757C;
     opacity: 1;
     transform: translate(0, 0);
 
     &:hover {
-      color: var(--color-light);
+      color: #F5F5F5;
       transition-delay: 0s;
     }
   }
 
   &:hover ~ .menu-item > .menu-link {
-    transition-duration: calc(var(--td) * 3);
+    transition-duration: calc(150ms * 3);
     transform: translate(0, var(--pull));
   }
 }
@@ -829,14 +819,13 @@ header .v-btn:not(.v-btn--round).v-size--default {
   color: #fff;
 }
 
-
 .menu-item a .item-label {
   position: relative;
   display: inline-block;
   white-space: nowrap;
   transition: color .2s, transform .5s ease, -webkit-transform .5s ease;
-  -webkit-text-stroke-color: #fff;
-  -webkit-text-stroke-width: 1px;
+  @include webkit-text-stroke-color;
+  -webkit-text-stroke-width: 1.5px;
   color: transparent;
 }
 

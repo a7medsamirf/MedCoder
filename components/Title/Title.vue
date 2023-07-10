@@ -3,13 +3,13 @@
   <section id="section-title">
     <v-container>
       <div class="section-title py-5">
-        <h2 class="pb-5">My Clients and <span class="custom-text-color">Testimonials</span></h2>
+        <h2 class="pb-3">My Clients and <span class="custom-text-color">Testimonials</span></h2>
         <p>In ut odio libero, at vulputate urna. Nulla tristique mi a massa convallis cursus. Nulla eu mi magna. Etiam
           suscipit commodo gravida. </p>
       </div>
       <div class="section-subtitle rellax" v-rellax="rellax" data-rellax-percentage="0.5" data-rellax-speed="2"
         data-rellax-xs-speed="-4" data-rellax-mobile-speed="3" data-rellax-tablet-speed="-8"
-        data-rellax-desktop-speed="1" style="font-size: 150px; transform: translateZ(0px) translateY(77.1037px);">
+        data-rellax-desktop-speed="1">
         {{SectionTitle}}<span>//</span></div>
     </v-container>
 
@@ -78,7 +78,7 @@
         }
       }
       h2 {
-        font-size: 40px;
+        font-size: 6vmin;
         font-weight: 800;
         position: relative;
       }
@@ -95,6 +95,8 @@
         position: absolute;
         text-transform: uppercase;
         font-weight: 900;
+        font-size: 17vmin;
+        transform: translateZ(0px) translateY(77.1037px);
 /*         @include left(150px); */
         color: #ccc;
         opacity: 0.1;
