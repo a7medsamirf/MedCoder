@@ -1,21 +1,15 @@
 <template>
    <div class="gallery-wrap" id="portfolio_horizontal_container">
     <div id="portfolio">
-      <v-container fluid>
-        <div class="breadcrumb">
-      <div class="col-full">
-        <h1 class="breadcrumb-heading"> {{PageTitle}}</h1>
-        <nav class="woocommerce-breadcrumb">
-          <nuxt-link to="/">Home</nuxt-link>
-          <span class="breadcrumb-separator"> / {{PageTitle}}</span>
-        </nav>
-      </div>
-    </div>
+      <v-container >
+        <Title
+    :SectionTitle="$t('SectionTitle.contacts-Us')"
+    />
 
     <v-row>
 
 
-<v-col md="4" cols="12" class="pa-1" v-for="(Project, index) in ProjectsData" :key="index">
+<v-col lg="4" md="6" cols="12" class="pa-1" v-for="(Project, index) in ProjectsData" :key="index">
         <div class="portfolio_item houses design" >
                                 <div class="grid-item-holder">
                    <v-img
@@ -24,7 +18,7 @@
                     :src="require(`~/static/images/Projects/${Project.img}`)"
                     :alt="Project.title"
                     contain
-                    height="100%" 
+                    height="100%"
                   >
                   </v-img>
                                     <div class="grid-det">
@@ -41,38 +35,10 @@
 </v-col>
 
     </v-row>
-              
+
       </v-container>
 
 
-
-
-
-
-
-
-
-
-              <CoolLightBox
-              :items="images"
-              :index="index"
-              :fullScreen="true"
-              @close="index = null">
-            </CoolLightBox>
-
-            <div class="images-wrapper">
-              <v-row>
-                <v-col md="4" cols="12"
-                class="image"
-                v-for="(image, imageIndex) in images"
-                :key="imageIndex"
-                :effect="'fade'"
-                @click="index = imageIndex"
-                :style="{ backgroundImage: 'url(' + image + ')' }">
-                </v-col>
-              </v-row>
-
-            </div>
 
 
 
@@ -83,24 +49,12 @@
 
 <script>
 import common from "~/api/common";
-import CoolLightBox from "vue-cool-lightbox";
-import "vue-cool-lightbox/dist/vue-cool-lightbox.min.css";
 export default {
-  components: {CoolLightBox, },
   name : 'Portfolio',
   data() {
     return {
       ProjectsData :common.Project,
       PageTitle: 'portfolio',
-      images: [
-        'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/nature-quotes-1557340276.jpg?crop=0.666xw:1.00xh;0.168xw,0&resize=640:*',
-        "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg",
-        "https://static.toiimg.com/photo/72975551.cms",
-        'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/nature-quotes-1557340276.jpg?crop=0.666xw:1.00xh;0.168xw,0&resize=640:*',
-        "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg",
-
-      ],
-      index: null,
     }
   },
   head() {
@@ -179,12 +133,11 @@ export default {
 	right:100%;
 	z-index:10;
 	overflow:hidden;
-  background: rgba(45,45,50,0.81);
+  background: rgb(11 13 57 / 80%);
 }
 .grid-item-holder:hover .grid-det  {
 	right:20px;
- 	-webkit-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .grid-det-item  , .grid-det_category {
 	position:absolute;
@@ -241,52 +194,7 @@ export default {
 	font-size:9px;
 	letter-spacing:2px;
 	text-align:left;
-  color: var(--custom-text-color);
+  color: var(--custom-text-color) !important;
 
-}
-.fet_pr-carousel-box-media-zoom , .box-media-zoom {
-	position: absolute;
-	top: 0;
-	right: -70px;
-	width: 70px;
-	height: 60px;
-	line-height: 60px;
-	color: #fff;
-	background: #35353A;
-	z-index: 5;
-	-webkit-transition: all 200ms linear;
-	transition: all 200ms linear;
-}
-.gallery-item:hover .fet_pr-carousel-box-media-zoom , .hov_zoom:hover .box-media-zoom  {
-	right: 0;
-}
-.portfolio_item img {
-	 width:auto;
-	position:relative;
-	z-index:1;
-	-webkit-transition: all 2000ms cubic-bezier(.19,1,.22,1) 0ms;
-	-webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  	transition: all 2000ms cubic-bezier(.19,1,.22,1) 0ms;
-}
-
-.portfolio_item:hover img {
-	opacity: 0.7;
-	-webkit-transform: scale(1.15);
-	transform: scale(1.15);
-}
-
-
-.portfolio_item {
-    width: auto;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-}
-
-.portfolio_item .grid-item-holder {
-    width: auto;
-    height: 100%;
 }
 </style>

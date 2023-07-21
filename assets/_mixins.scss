@@ -268,3 +268,14 @@
 @mixin shadow1 {
   box-shadow: none
 }
+
+/* Custom font */
+
+@mixin Custom-font {
+ .v-application--is-rtl & {
+  font-family: "Tajawal", sans-serif;
+  }
+  .v-application--is-ltr & {
+    font-family: "Rubik Mono One", sans-serif;
+  }
+}

@@ -42,7 +42,7 @@ $p-light-text: 300;
 $box-shadow:  0 6px 20px 4px rgb(56 125 255 / 28%) !important;
 
 //transition
- $transition: all 0.5s ease-in-out; 
+ $transition: all 0.5s ease-in-out;
 // Link
 $palette-link: var(--v-anchor-base);
 
@@ -68,7 +68,7 @@ $dark-body: #0B0D39 !important;
 $dark-section-bg: #1A1C46 !important;
 
 
-$dark-text-primary: var(--white-color);
+$dark-text-primary: #fff;
 $dark-text-secondary: rgba(255, 255, 255, 0.7);
 $dark-text-disabled: rgba(255, 255, 255, 0.5);
 $dark-text-hint: rgba(255, 255, 255, 0.5);

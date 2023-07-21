@@ -63,7 +63,7 @@
     <v-list-item class="pa-5">
         <div class="logo">
           <NuxtLink :to="localePath('/')" >
-          <v-img v-if="!$vuetify.theme.dark" width="170px" :src="require('static/sidebar-dark.png')" ></v-img> 
+          <v-img v-if="!$vuetify.theme.dark" width="170px" :src="require('static/sidebar-dark.png')" ></v-img>
           <v-img v-else width="170px" :src="require('static/sidebar-white.png')" ></v-img>
         </NuxtLink>
 
@@ -144,7 +144,7 @@
       </div>
         <v-spacer />
 
-<!-- 
+<!--
         <v-toolbar-items class="hidden-md-and-down DesktopNav scrollactive-item" v-for="(item, i) in items" :key="i">
           <v-btn text
                  v-if="!item.subitems"
@@ -184,7 +184,7 @@ export default {
       Lang : '',
       links: [
         {title: 'nav.Home', to: '/', number: '01'},
-        {title: 'nav.Projects', to: '', number: '02'},
+        {title: 'nav.Projects', to: '/portfolio', number: '02'},
         {title: 'nav.Services', to: '/test', number: '03'},
         {title: 'nav.about-Us', to: '', number: '04'},
         {title: 'nav.Feedback', to: '', number: '05'},

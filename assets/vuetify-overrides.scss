@@ -669,8 +669,8 @@ header .v-btn:not(.v-btn--round).v-size--default {
   position: relative;
   z-index: 1;
   > .menu-item {
-    font-family: "Rubik Mono One", sans-serif;
-    font-size: 5vmin;
+    @include Custom-font;
+    font-size: 4vmin;
   }
 }
 
@@ -797,8 +797,6 @@ header .v-btn:not(.v-btn--round).v-size--default {
 }
 
 
-
-
 .menu-item a:hover sup {
   -webkit-transform: translateX(15px);
   -ms-transform: translateX(15px);
@@ -816,7 +814,8 @@ header .v-btn:not(.v-btn--round).v-size--default {
   transition: transform 0.5s ease, opacity 0.5s ease;
   transition: transform 0.5s ease, opacity 0.5s ease, -webkit-transform 0.5s ease;
   vertical-align: text-top;
-  color: #fff;
+  @include title-text-color;
+
 }
 
 .menu-item a .item-label {
@@ -825,7 +824,7 @@ header .v-btn:not(.v-btn--round).v-size--default {
   white-space: nowrap;
   transition: color .2s, transform .5s ease, -webkit-transform .5s ease;
   @include webkit-text-stroke-color;
-  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-width: 1.6px;
   color: transparent;
 }
 
