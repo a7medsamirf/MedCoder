@@ -215,7 +215,7 @@ border-bottom: 1px solid #ffffff1f !important
 border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
 }
 .v-navigation-drawer {
-transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
+transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
 

@@ -1,7 +1,14 @@
 <template>
     <section id="Testimonials" class="ReviewCard pt-16">
-        <Title :SectionTitle="$t('SectionTitle.Testimonials')" />
-            <slick ref="slick" :options="slickOptions">
+
+        <Title
+        :SectionTitle="$t('SectionTitle.Testimonials')"
+        :SectionHead="$t('SectionHead.Testimonials-Head')"
+        :SectioDesc="$t('SectioDesc.Testimonials-Desc')"
+      />
+
+
+            <slick ref="slick" :options="TestimonialsOptions">
             <div class="review text-center"
             v-for="(review, index) in reviews" :key="index">
               <div class="person-block">
@@ -13,7 +20,7 @@
                   contain
                 ></v-img>
             </v-avatar>
-          
+
                 <v-list-item-title class="use-text-title5 text-color-default mb-1 mt-3">
                   {{ review.name }}
                 </v-list-item-title>
@@ -23,7 +30,7 @@
                 class="mx-auto pa-5"
                 outlined
               >
-    
+
                 <v-list-item >
                   <v-list-item-content>
                     <div class="text-overline">
@@ -43,14 +50,14 @@
                 </v-list-item>
               </v-card>
             </div>
-    
-    
-    
-    
+
+
+
+
             </div>
-    
+
       </slick>
-    
+
 
     </section>
 </template>
@@ -61,14 +68,15 @@ import Title from '../Title/Title.vue';
 import common from "~/api/common";
 export default {
   name: "Testimonials",
-  components: { 
+  components: {
     Slick: () => import('vue-slick'),
-    Title 
+    Title
   },
   data(){
         return {
           reviews :common.review,
-          slickOptions: {
+
+          TestimonialsOptions: {
             slidesToShow: 3,
             centerMode: true,
             arrows: true,
@@ -94,10 +102,10 @@ export default {
               }
             ]
           }
-    
+
         }
       },
- 
+
 }
 </script>
 
@@ -146,7 +154,7 @@ export default {
             font-family: "Monoton", cursive;
           }
         }
-    
+
       }
       .slick-slide.slick-current.slick-active.slick-center
       {
@@ -163,7 +171,7 @@ export default {
             transform: translateY(0);
           }
         }
-    
+
       }
     }
 

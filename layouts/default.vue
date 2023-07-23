@@ -3,7 +3,7 @@
 
   <TheHeader />
 
-  <v-main id="wrapper" class="">
+  <v-main id="wrapper" class="pa-0">
 
 <Nuxt />
 
@@ -19,7 +19,6 @@
      color="#cb2d3e"
      color-hover="#000"
      outside-size="65px"
-
      />
 
 
@@ -109,9 +108,6 @@ header .v-btn:not(.v-btn--round).v-size--default {
   text-transform: capitalize;
 }
 
-.v-navigation-drawer {
-  transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);
-}
 .close-icon:hover .v-icon
 {
   transition: 0.70s;

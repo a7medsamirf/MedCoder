@@ -28,8 +28,17 @@ export default () => {
       },
       SectionTitle: {
         "Testimonials": "Testimonials",
+        "Projects": "Projects.",
         "contacts-Us": "Contacts Us",
       },
+      SectionHead: {
+        "Projects-Head": "Our Creative",
+        "Testimonials-Head": "أراء عملائنا",
+    },
+    SectioDesc: {
+      "Projects-Desc": "Awesome Works.",
+      "Testimonials-Desc": "أراء عملائنا",
+    },
       contacts: {
         "Mails": "Our Emails",
         "Phones": "Our Phones",

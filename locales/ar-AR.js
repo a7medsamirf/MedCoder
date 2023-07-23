@@ -28,7 +28,16 @@ export default () => {
       },
       SectionTitle: {
         "Testimonials": "أراء عملائنا",
+        "Projects": "مشاريعنا.",
         "contacts-Us": "أتصل بنا",
+      },
+      SectionHead: {
+        "Projects-Head": "أعمالنا الإبداعية",
+        "Testimonials-Head": "أراء عملائنا",
+      },
+      SectioDesc: {
+        "Projects-Desc": "أعمال رهيبة",
+        "Testimonials-Desc": "أراء عملائنا",
       },
       contacts: {
         "Mails": "البريد الإلكتروني ",
