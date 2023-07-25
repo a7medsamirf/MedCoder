@@ -7,23 +7,22 @@
         fab
         fixed
         bottom
-        :ripple="false" 
-        icon 
-        id="no-background-hover" 
+        :ripple="false"
+        icon
+        id="no-background-hover"
         right
         class="progressbar"
       >
       <a href="#" id="scroll-top" class="active">
-        <span class="text">Back to top</span>
-        <span class="line"></span>
+        <span class="text">{{ $t('common.Back-to-top') }}</span>
     </a>
-      
+
 
 
       </v-btn>
     </v-fab-transition>
   </template>
-  
+
   <script>
   export default {
      name: "onScroll",
@@ -49,7 +48,7 @@
     },
   };
   </script>
-  
+
   <style lang="scss">
 .progressbar
   {
@@ -71,35 +70,27 @@
     transform: rotate(90deg);
     text-transform: uppercase;
     white-space: nowrap;
-    color: #fff;
+   @include description-text-color;
+
 }
-/* .line {
-    position: absolute;
-    width: 1px;
-    height: 100px;
-    background-color: rgb(255 255 255 / 40%);
-    @include right(70px);
-    bottom: -50px;
-}
- */
   }
-  
+
 #no-background-hover::before {
-   background-color: transparent !important; 
+   background-color: transparent !important;
 }
 
 
 #scroll-top .text::after{
-    top: 7px;
-    left: 100px;
+    top: 8px;
+    left: 110px;
     width: 50px;
     height: 1px;
     content: "";
     position: absolute;
-    background-color: rgb(255 255 255 / 40%);
+    @include palette-background-default
+
 }
 
 
 
   </style>
-  

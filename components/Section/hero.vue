@@ -10,7 +10,7 @@
       
                 <div class="title2">
                     <div class="block"> </div>
-                    <h1 class="text-color-default hero-title ">{{ $t('HeroSection.hello') }} <br>
+                    <h1 class="text-color-default hero-title mb-5">{{ $t('HeroSection.hello') }} <br>
                       <span class="">{{ $t('HeroSection.im') }} <span class="custom-text-color">{{ $t('HeroSection.ahmed') }} </span></span>
                       <br> 
                       <span class="job-title">
@@ -94,7 +94,7 @@ export default {
 <style lang="scss" scoped>
  .theme--light {
   .axil-scrollbown{
-   border: 3px solid rgba(0, 0, 0, 0.21);
+   border: 1px solid rgba(0, 0, 0, 0.21);
    span{
     background-color: rgba(0, 0, 0, 0.21);
    }
@@ -103,7 +103,7 @@ export default {
 
  .theme--dark {
   .axil-scrollbown{
-   border: 3px solid rgba(255,255,255,0.12157);
+   border: 1px solid rgba(255, 255, 255, 0.08);
    span{
     background-color: rgba(255,255,255,0.12157);
    }

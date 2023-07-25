@@ -1,7 +1,7 @@
 <template>
   <div class="SocialMedia text-center my-5">
     <ul class="pa-0">
-      <li class="Social-icon" v-for="(social, index) in SocialIcon" :key="index">
+      <li class="Social-icon rounded-lg" v-for="(social, index) in SocialIcon" :key="index">
         <a class="text-color-default" :href="social.to" target="_blank" :title="social.title">
           <v-icon small>{{ social.Icon }}</v-icon>
         </a>
@@ -46,25 +46,25 @@
       li{
         display: inline-block;
         &.Social-icon {
-        padding: 10px;
-        margin: 5px;
-        cursor: pointer;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        width: 40px;
-        height: 40px;
-        text-align: center;
-        font-size: 17px;
-        line-height: 20px;
-        transition: all 0.5s ease-in-out;
+          padding: 10px;
+          margin: 5px;
+          cursor: pointer;
+          @include border-color;
+          width: 35px;
+          height: 35px;
+          text-align: center;
+          font-size: 16px;
+          line-height: 15px;
+          transition: $transition;
         &:hover{
             background: var(--maincolor);
             border-radius: 50% ;
-            a{
-          color: #fff !important;
+            a ,i{
+             color: #fff !important;
       }
         }
       }
-    
+
       }
     }
   }

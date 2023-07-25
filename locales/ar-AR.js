@@ -11,6 +11,7 @@ export default () => {
         "Testimonials": "أراء العملاء",
         "Testimonials-desc": "ماذا يقول عملاؤنا عنا",
         "Dark-Mode": "الوضع المظلم",
+        "Back-to-top": "الصعودى الى الأعلى",
       },
       nav: {
         "pages": "صفحات",

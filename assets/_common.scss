@@ -133,7 +133,7 @@
   color: #fff;
   border-radius: 5px;
   margin-block: 1em;
-  text-indent: 0 !important; 
+  text-indent: 0 !important;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -181,4 +181,10 @@
 
 .white-text-bg-dark{
   @include white-text-color-bg-dark;
+}
+
+
+.section-bg{
+  @include palette-background-section;
+
 }

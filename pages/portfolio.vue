@@ -14,8 +14,8 @@
                                 <div class="grid-item-holder">
                    <v-img
                     class="photo"
-                    v-if="Project.img"
-                    :src="require(`~/static/images/Projects/${Project.img}`)"
+                    v-if="Project.image"
+                    :src="require(`~/static/images/Projects/${Project.image}`)"
                     :alt="Project.title"
                     contain
                     height="100%"
@@ -137,7 +137,7 @@ export default {
 }
 .grid-item-holder:hover .grid-det  {
 	right:20px;
-  transition: all 0.5s ease-in-out;
+  transition: $transition;
 }
 .grid-det-item  , .grid-det_category {
 	position:absolute;

@@ -11,7 +11,7 @@
     font-size: 0;
     line-height: 0;
     position: absolute;
-    top: 50%;
+    top: -15vh;
     display: block;
     width: 20px;
     height: 20px;
@@ -34,12 +34,12 @@
     font-size: 0;
     line-height: 0;
     position: absolute;
-    top: 50%;
+    top: -15vh;
     display: block;
     width: 20px;
     height: 20px;
     padding: 0;
-    left: 100px;
+    right: 50px;
     transform: translate(0, -50%);
     cursor: pointer;
     color: transparent;
@@ -179,7 +179,7 @@
     color: #3a37eb;
     background-color: #fff;
     padding: 10px;
-    transition: all 0.5s ease-in-out;
+    transition: $transition;
 }
 
 .slick-prev:hover:before,
@@ -189,7 +189,7 @@
     padding: 10px;
 }
 
-/* 
+/*
 .slick-dots:before {
   content: "";
   position: absolute;

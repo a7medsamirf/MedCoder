@@ -10,11 +10,12 @@
   .v-card
  {
     background-color: $dark-body;
-  }
+    border-color: rgb(97 100 255 / 70%);
+}
   header.v-toolbar a.v-btn--active,
   .text-color-default {
     color: #fff !important;
-  }  
+  }
 
 /*   h1,
   h2{
@@ -64,6 +65,6 @@
 }
 
 .theme--dark.v-btn.v-btn--has-bg {
-  background-color: #3a37eb !important;
-  border-color: #3a37eb;
+  background-color: var(--v-default-base) ;
+  border-color: var(--v-default-base);
 }

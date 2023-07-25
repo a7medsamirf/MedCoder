@@ -10,19 +10,19 @@
 
             <slick ref="slick" :options="TestimonialsOptions">
             <div class="review text-center"
-            v-for="(review, index) in reviews" :key="index">
+            v-for="(Review, index) in ReviewData" :key="index">
               <div class="person-block">
                 <v-avatar class="photo" width="80" height="80">
                   <v-img
-                  v-if="review.image"
-                  :src="require(`~/static/images/avatars/${review.image}`)"
-                  :alt="review.alt"
+                  v-if="Review.image"
+                  :src="require(`~/static/images/avatars/${Review.image}`)"
+                  :alt="Review.alt"
                   contain
                 ></v-img>
             </v-avatar>
 
                 <v-list-item-title class="use-text-title5 text-color-default mb-1 mt-3">
-                  {{ review.name }}
+                  {{ Review.name }}
                 </v-list-item-title>
               </div>
             <div class="comment-block">
@@ -39,13 +39,13 @@
                     half-increments
                     color="yellow darken-3"
                     background-color="grey lighten-1"
-                    :value="review.ratings"
+                    :value="Review.ratings"
                     dense
                     size="20"
                   ></v-rating>
 
                 </div>
-                    <v-list-item-subtitle class="use-text-paragraph" v-text="review.comment"/>
+                    <v-list-item-subtitle class="use-text-paragraph" v-text="Review.comment"/>
                   </v-list-item-content>
                 </v-list-item>
               </v-card>
@@ -63,9 +63,8 @@
 </template>
 
 <script>
-
-import Title from '../Title/Title.vue';
 import common from "~/api/common";
+import Title from '../Title/Title.vue';
 export default {
   name: "Testimonials",
   components: {
@@ -74,10 +73,9 @@ export default {
   },
   data(){
         return {
-          reviews :common.review,
-
+          ReviewData :common.review,
           TestimonialsOptions: {
-            slidesToShow: 3,
+            slidesToShow: 2,
             centerMode: true,
             arrows: true,
             dots: true,

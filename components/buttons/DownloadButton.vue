@@ -1,5 +1,5 @@
 <template>
-       <a data-cursor-hover class="btn-primary-V1" target="_blank"  @click="downloadFile">Download CV <i class="fa-duotone fa-file-pdf fa-lg"></i></a>
+       <a data-cursor-hover class="btn-primary-V1 rounded-lg" target="_blank"  @click="downloadFile">Download CV <i class="fa-duotone fa-file-pdf fa-lg"></i></a>
   </template>
 
   <script>

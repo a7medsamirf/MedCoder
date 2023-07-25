@@ -41,7 +41,7 @@
     <template v-slot:activator="{ on, attrs }">
       <div class="pa-0">
 
-<v-btn v-bind="attrs" v-on="on"  class="pa-0 ma-0 btn default rounded-0 white-text-bg-dark"  height="72" min-width="100%">
+<v-btn :to="localePath('/contacts')" v-bind="attrs" v-on="on"  class="pa-0 ma-0 btn default rounded-0 white-text-bg-dark"  height="72" min-width="100%">
 <i class="fa-duotone fa-envelope fa-lg"></i> </v-btn>
 </div>
 

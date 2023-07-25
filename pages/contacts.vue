@@ -1,6 +1,6 @@
 <template>
-  <div id="contacts">
-    <Title 
+  <div id="contacts" class="py-20">
+    <Title
     :SectionTitle="$t('SectionTitle.contacts-Us')"
     />
     <v-container >
@@ -31,7 +31,7 @@
           </v-row>
 
         </u-animate-container>
-            
+
     </v-container>
 
 
@@ -41,7 +41,7 @@
             <v-row>
               <v-col cols="12" md="6" class="py-0">
                 <v-text-field
-                  class="mb-0"
+                  class="mb-0 rounded-lg"
                   :label="$t('contacts.Your-Name')"
                   required
                   outlined
@@ -89,7 +89,7 @@
               </v-col>
             </v-row>
           </v-col>
-                 
+
                <!----- Start Map Location ----->
                <v-col class="py-0" cols="12" lg="6" md="6">
                     <div class="map-container fl-wrap">
@@ -97,9 +97,9 @@
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d220676.97262028238!2d31.287668169710557!3d30.077765111656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60b21beeb%3A0x79dfb296e8423bba!2z2KfZhNmC2KfZh9ix2KnYjCDZhdit2KfZgdi42Kkg2KfZhNmC2KfZh9ix2KnigKw!5e1!3m2!1sar!2seg!4v1684586368164!5m2!1sar!2seg" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                       </div>
                     </div>
-         
+
                    </v-col>
-                         <!----- End Map Location ----->   
+                         <!----- End Map Location ----->
         </v-row>
       </v-container>
 

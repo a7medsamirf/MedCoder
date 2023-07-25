@@ -42,14 +42,18 @@ $p-light-text: 300;
 $box-shadow:  0 6px 20px 4px rgb(56 125 255 / 28%) !important;
 
 //transition
- $transition: all 0.5s ease-in-out;
+$transition: all 0.5s ease-in-out;
+
 // Link
 $palette-link: var(--v-anchor-base);
 
 // card bg
 $card-bg:rgba(255, 255, 255, 0.05882);
 
+// border color
 
+$dark-border-color : 1px solid rgba(255, 255, 255, 0.08);
+$light-border-color : 1px solid rgba(0, 0, 0, 0.21);
 
 // Common color palette
 $palette-common-white: #FFF !important;
@@ -78,9 +82,8 @@ $dark-background-default: #1b344d;
 
 
 // Theme color
-
-$light-background-section: var(--white-section);
-$dark-background-section: var(--dark-section);
+$light-background-section: #eff4fb;
+$dark-background-section: #090b33;
 
 
 // dark shadow

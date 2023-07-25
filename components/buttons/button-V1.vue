@@ -1,6 +1,6 @@
 <template>
   <div>
-     <NuxtLink data-cursor-hover class="btn-primary-V1" to="/portfolio"> {{ $t('common.My-Portfolio') }} <i class="arrow"></i></NuxtLink>
+     <NuxtLink data-cursor-hover class="btn-primary-V1 rounded-lg" to="/portfolio"> {{ $t('common.My-Portfolio') }} <i class="arrow"></i></NuxtLink>
   </div>
 </template>
 

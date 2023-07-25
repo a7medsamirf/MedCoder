@@ -1,5 +1,5 @@
 <template>
-  <section id="Projects" class="ProjectsCard py-20">
+  <section id="Projects" class="ProjectsCard section-bg py-20">
 
     <Title
         :SectionTitle="$t('SectionTitle.Projects')"
@@ -15,8 +15,8 @@
 
                   <v-img
                     class="photo"
-                    v-if="Project.img"
-                    :src="require(`~/static/images/Projects/${Project.img}`)"
+                    v-if="Project.image"
+                    :src="require(`~/static/images/Projects/${Project.image}`)"
                     :alt="Project.title"
                     contain
                     height="100%"
@@ -63,6 +63,7 @@ import Title from '../Title/Title.vue'
           arrows: true,
           dots: true,
           infinite: true,
+          adaptiveHeight: true,
           speed: 800,
           autoplaySpeed: 3000,
           autoplay: false,

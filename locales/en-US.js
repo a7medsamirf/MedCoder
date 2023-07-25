@@ -11,6 +11,7 @@ export default () => {
         "Testimonials": "Testimonials",
         "Testimonials-desc": "What our customers say about us",
         "Dark-Mode": "Dark Mode",
+        "Back-to-top": "Back to top",
       },
       nav: {
         "pages": "Pages",
@@ -27,17 +28,17 @@ export default () => {
         "faq": "Faq",
       },
       SectionTitle: {
-        "Testimonials": "Testimonials",
+        "Testimonials": "Feedback",
         "Projects": "Projects.",
         "contacts-Us": "Contacts Us",
       },
       SectionHead: {
         "Projects-Head": "Our Creative",
-        "Testimonials-Head": "أراء عملائنا",
+        "Testimonials-Head": "Our Customer",
     },
     SectioDesc: {
       "Projects-Desc": "Awesome Works.",
-      "Testimonials-Desc": "أراء عملائنا",
+      "Testimonials-Desc": "Testimonials",
     },
       contacts: {
         "Mails": "Our Emails",

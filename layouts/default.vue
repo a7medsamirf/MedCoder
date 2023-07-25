@@ -158,7 +158,7 @@ header .v-btn:not(.v-btn--round).v-size--default {
     color: #0000008a;
     letter-spacing: 0;
     font-weight: bold;
-    transition: all 0.5s ease-in-out;
+    transition: $transition;
   }
 }
 .theme--dark.v-app-bar.v-toolbar.v-sheet
@@ -181,7 +181,7 @@ header .v-btn:not(.v-btn--round).v-size--default {
       color: #fff;
       letter-spacing: 0;
       font-weight: bold;
-      transition: all 0.5s ease-in-out;
+      transition: $transition;
     }
   }
 
@@ -220,12 +220,5 @@ header .v-btn:not(.v-btn--round).v-size--default {
 .theme--dark .nav-menu::before {
   border-bottom: 13px solid rgb(0 30 38 / 72%) !important;
 }
-
-
-
-
-
-
-
 
 </style>

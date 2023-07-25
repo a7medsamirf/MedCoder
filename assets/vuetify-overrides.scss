@@ -64,7 +64,6 @@ Style Index
 body {
   text-transform: capitalize;
   letter-spacing: normal;
-  cursor: none;
 }
 
 html {
@@ -94,11 +93,6 @@ a {
 
 .v-chip--label {
   border-radius: 0 !important;
-}
-
-.py-20 {
-  padding-top: 6.25rem !important;
-  padding-bottom: 6.25rem !important;
 }
 
 .pt-20 {
@@ -132,8 +126,9 @@ a {
 }
 
 .py-20 {
-  padding-top: 4rem !important;
-  padding-bottom: 4rem !important;
+  padding-top: 6.25rem !important;
+  padding-bottom: 6.25rem !important;
+
 
   @include breakpoints-down(md) {
     padding-top: 3rem !important;
@@ -146,7 +141,7 @@ a {
     padding-bottom: 2rem !important;
     ;
   }
-}
+}-ذ
 
 .colorful-title {
   background-image: linear-gradient(101.97deg, #55B1F8 20.61%, #6C14F2 46.13%, #9E14F2 73.88%);
@@ -170,13 +165,13 @@ section {
 
 .v-toolbar.v-app-bar.v-app-bar--fixed, {
   background: transparent !important;
-  transition: all 0.5s ease-in-out;
+  transition: $transition;
 }
 
 .v-toolbar.v-app-bar.v-app-bar--fixed.v-app-bar--is-scrolled {
   margin: 0 !important;
   border-radius: 0 !important;
-  transition: all 0.5s ease-in-out;
+  transition: $transition;
   background: rgb(255 255 255 / 40%) !important;
   backdrop-filter: blur(8px);
 }
@@ -422,8 +417,6 @@ header .v-btn:not(.v-btn--round).v-size--default {
 
 #Projects {
   position: relative;
-  background-color: #090b33;
-
   .slick-slide.slick-current.slick-active .box-media {
     transition-delay: 0.3s;
     @include right(0px);
@@ -447,36 +440,31 @@ header .v-btn:not(.v-btn--round).v-size--default {
       transition: all 400ms linear;
     }
   }
+  .slick-slide.slick-current.slick-active.slick-center .Project-title {
+    -webkit-transform: perspective(1200px) rotateX(0deg) translateZ(0px);
+    -moz-transform: perspective(1200px) rotateX(0deg) translateZ(0px);
+    transform: perspective(1200px) rotateX(0deg) translateZ(0px);
+    transition-delay: 0.3s;
+    -webkit-transition: all 400ms linear;
+    transition: all 400ms linear;
+  }
+  .slick-slide {
+    opacity: 0.3;
+    transform: scale(0.9);
+    padding: 0 ;
+    -webkit-transition: all 400ms linear;
+    transition: all 400ms linear;
+    cursor: pointer;
+    margin-bottom: 50px;
+  }
+  .slick-slide.slick-current.slick-active {
+    opacity: 1;
+    -webkit-transform: scale(1.0);
+    -moz-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+
 }
-
-
-#Projects .slick-slide.slick-current.slick-active.slick-center .Project-title {
-  -webkit-transform: perspective(1200px) rotateX(0deg) translateZ(0px);
-  -moz-transform: perspective(1200px) rotateX(0deg) translateZ(0px);
-  transform: perspective(1200px) rotateX(0deg) translateZ(0px);
-  transition-delay: 0.3s;
-  -webkit-transition: all 400ms linear;
-  transition: all 400ms linear;
-}
-
-#Projects .slick-slide {
-  opacity: 0.3;
-  transform: scale(0.9);
-  padding: 0 ;
-  -webkit-transition: all 400ms linear;
-  transition: all 400ms linear;
-  cursor: pointer;
-  margin-bottom: 50px;
-}
-
-#Projects .slick-slide.slick-current.slick-active {
-  opacity: 1;
-  -webkit-transform: scale(1.0);
-  -moz-transform: scale(1.0);
-  transform: scale(1.0);
-}
-
-
 
 .v-list .v-list-item {
   opacity: 0.7;
@@ -824,9 +812,9 @@ aside.v-navigation-drawer {
   -webkit-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
-  -webkit-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
   pointer-events: none;
   border-top-right-radius: 100%;
   border-bottom-right-radius: 100%;

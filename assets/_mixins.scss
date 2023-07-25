@@ -55,6 +55,17 @@
   @include rtl-sass-border-right($val);
 }
 
+/* Border color */
+@mixin border-color {
+  .theme--light & {
+    border: $light-border-color
+  }
+  .theme--dark & {
+    border: $dark-border-color
+}
+}
+
+
 /* Text color palette */
 @mixin palette-text-primary {
   .theme--light & {
@@ -144,6 +155,7 @@
   }
 }
 
+
 /* Background color palette */
 @mixin palette-background-section {
   .theme--light & {
@@ -154,12 +166,13 @@
   }
 }
 
+
 @mixin palette-background-default {
   .theme--light & {
-    background-color: $light-background-default
+    background-color: $light-description-text
   }
   .theme--dark & {
-    background-color: $dark-background-default
+    background-color: $dark-description-text
   }
 }
 
