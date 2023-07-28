@@ -24,7 +24,7 @@ Style Index
   [1. Start Basic Setup ]
 --------------------------------------------------*/
 :root {
-  --maincolor: #3a37eb;
+  --maincolor: #d9230a;
   --p-darkcolor: #a9a9a9;
   --white-color: #fff;
   --dark-body: #0B0D39;
@@ -32,8 +32,12 @@ Style Index
   --dark-section: #1A1C46;
   --dark-card: #1A1C46;
   --white-card: #1A1C46;
-  --custom-text-color: #F68338
+  --custom-text-color: #F68338;
+  --bg-color: linear-gradient(135deg,#d90a2c 0,#ed0d50 50%,#d9230a 100%);
+
 }
+
+
 
 .theme--dark.v-application .section-bg-img {
   background-image: url(#{$BodyBgPath}/header-bg.webp) !important;
@@ -163,7 +167,7 @@ section {
   [2. Theme color   ]
 --------------------------------------------------*/
 
-.v-toolbar.v-app-bar.v-app-bar--fixed, {
+.v-toolbar.v-app-bar.v-app-bar--fixed {
   background: transparent !important;
   transition: $transition;
 }
@@ -201,7 +205,6 @@ section {
 }
  */
 @include breakpoints-down(md) {
-
   .slick-prev:before,
   .slick-next:before {
     font-size: 12px !important;

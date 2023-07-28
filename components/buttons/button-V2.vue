@@ -13,7 +13,7 @@ export default {
 <style lang="scss" scoped>
 .rts-btn.btn-secondary {
     color: #3a37eb;
-    background: #3a37eb;
+    background: var(--bg-color);
 }
 .rts-btn {
     padding: 18px 29px;

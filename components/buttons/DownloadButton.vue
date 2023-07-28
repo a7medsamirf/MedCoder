@@ -35,7 +35,7 @@
       font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
       margin-top: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
       line-height: 23px;
-      background-color: #3a37eb;
+      background: var(--bg-color);
       padding: calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320))) calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
       color: #fff !important;
       display: -webkit-inline-box;

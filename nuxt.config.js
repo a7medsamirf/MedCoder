@@ -3,8 +3,8 @@ import { theme } from './config/vuetify.options'
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  ssr: false,
-  target: 'static',
+/*   ssr: false,
+  target: 'static', */
   head: {
     titleTemplate: '%s - MedCoder',
     title: 'MedCoder',
@@ -58,6 +58,13 @@ export default {
 
 
   ],
+/*   serverMiddleware: [
+    { path: '/api', handler: '~/api/posts.js' },
+  ], */
+  serverMiddleware: [
+    { path: '/api', handler: '~/api/index.js' }
+  ],
+
   devtools: { enabled: true },
 
   // Auto import components: https://go.nuxtjs.dev/config-components
