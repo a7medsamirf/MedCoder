@@ -16,9 +16,10 @@
 
 
     <cursor-fx
-     color="#cb2d3e"
+     color="#cb2d3e80"
      color-hover="#000"
-     outside-size="65px"
+     outside-size="75px"
+     inside-size="30px"
      />
 
 
