@@ -2,7 +2,7 @@
     <v-fade-transition mode="out-in">
       <v-tooltip v-if="!$vuetify.theme.dark" bottom>
         <template v-slot:activator="{ on }">
-          <v-btn icon v-on="on" fab @click="toggle_dark_mode">
+          <v-btn icon v-on="on" fab @click="toggle_dark_mode" class="ThemeSwitcher-btn">
             <v-img
               height="20"
               max-width="20"
@@ -18,7 +18,7 @@
   
       <v-tooltip v-else bottom>
         <template v-slot:activator="{ on }">
-          <v-btn icon v-on="on"  fab @click="toggle_dark_mode">
+          <v-btn icon v-on="on"  fab @click="toggle_dark_mode" class="ThemeSwitcher-btn">
             <v-img
               height="20"
               max-width="20"
@@ -56,3 +56,13 @@
     },
   }
   </script>
+
+ <style lang="scss" scoped>
+  .ThemeSwitcher-btn{
+    align-items: center;
+    background-color: #fee6e3;
+    color: #111;
+    cursor: pointer;
+  }
+
+</style>

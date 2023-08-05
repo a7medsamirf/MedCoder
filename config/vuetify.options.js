@@ -23,7 +23,7 @@ export default {
         default: '#d9230a',
       },
       light: {
-        background: '#d0f0c0',
+        background: '#ffffff',
         bg: "#ffffff",
         surface: "#ffffff",
         bggrey: '#faf7f2',

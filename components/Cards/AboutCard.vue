@@ -1,5 +1,5 @@
 <template>
-    <v-card outlined class="About-card py-3 px-1 ">
+    <v-card class="About-card py-3 px-1 ">
               <v-list-item three-line >
                 <v-list-item-avatar
                   tile

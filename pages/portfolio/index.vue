@@ -133,7 +133,7 @@ export default {
  right:100%;
  z-index:10;
  overflow:hidden;
- background: rgb(11 13 57 / 80%);
+ background: rgb(18 18 18 / 80%);
 }
 .grid-item-holder:hover .grid-det  {
  right:20px;

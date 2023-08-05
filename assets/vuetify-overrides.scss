@@ -818,3 +818,50 @@ aside.v-navigation-drawer {
   border-bottom-right-radius: 100%; */
 
 }
+
+
+
+
+.my-btn-class-12 {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  gap: 10px;
+}
+.my-btn-class-12:after {
+  background-color: #111;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+.my-btn-class-12:hover:after {
+  transform: translate(0, 0);
+}
+
+.theme--light.v-app-bar.v-toolbar.v-sheet {
+  background-color: #fff !important;
+}
