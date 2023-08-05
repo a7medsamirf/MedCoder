@@ -3,8 +3,13 @@
       <v-tooltip v-if="!$vuetify.theme.dark" bottom>
         <template v-slot:activator="{ on }">
           <v-btn icon v-on="on" fab @click="toggle_dark_mode">
-         
-            <i class="fa-duotone fa-moon-stars fa-xl bg-purple-darken-2"></i>
+            <v-img
+              height="20"
+              max-width="20"
+              :src="require('static/images/svg/moon-filled-to-sunny-filled-loop-transition.svg')"
+            >
+          </v-img>
+
             
           </v-btn>
         </template>
@@ -14,7 +19,12 @@
       <v-tooltip v-else bottom>
         <template v-slot:activator="{ on }">
           <v-btn icon v-on="on"  fab @click="toggle_dark_mode">
-            <i class="fa-solid fa-sun-bright fa-xl warning--text"></i>
+            <v-img
+              height="20"
+              max-width="20"
+              :src="require('static/images/svg/sunny-filled-loop-to-moon-filled-loop-transition.svg')"
+            >
+          </v-img>
 
           </v-btn>
         </template>

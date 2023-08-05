@@ -5,11 +5,9 @@
 .theme--dark.v-application {
   background-color: $dark-body ;
   color: $palette-common-white;
-  .v-navigation-drawer,
-  .v-toolbar.v-app-bar,
   .v-card
  {
-    background-color: $dark-body;
+    background-color: $dark-card;
     border-color: rgb(97 100 255 / 70%);
 }
   header.v-toolbar a.v-btn--active,

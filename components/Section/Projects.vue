@@ -23,7 +23,7 @@
                   >
                   </v-img>
 
-        <NuxtLink class="box-media default rounded-0 elevation-0 mt-0 pt-0" :to="Project.link" router target="_blank">
+        <NuxtLink class="box-media custom-bg-color rounded-0 elevation-0 mt-0 pt-0" :to="Project.link" router target="_blank">
 
             <i class="fa-duotone fa-magnifying-glass fa-lg"></i>
           </NuxtLink>
@@ -31,7 +31,7 @@
         </div>
         <div class="comment-block">
 
-          <v-list-item-title class="Project-title use-text-title5 white-text-bg-dark default mb-1">
+          <v-list-item-title class="Project-title use-text-title5 white-text-bg-dark custom-bg-color mb-1">
             {{ Project.title }}
           </v-list-item-title>
 

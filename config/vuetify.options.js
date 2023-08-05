@@ -9,9 +9,9 @@ export default {
     dark: darkMode === 'true',
     themes: {
       dark: {
-        background: '#0B0D39',
-        bg: "#0B0D39", // body bg
-        surface: "#2B2D5B", // card and all box
+        background: '#212121',
+        bg: "#212121", // body bg
+        surface: "#121212", // card and all box
         bggrey: '#001e26',
         primary: '#3a37eb',
         secondary: '#424242',

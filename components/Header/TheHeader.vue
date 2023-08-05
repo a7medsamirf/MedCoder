@@ -41,7 +41,7 @@
     <template v-slot:activator="{ on, attrs }">
       <div class="pa-0">
 
-<v-btn :to="localePath('/contacts')" v-bind="attrs" v-on="on"  class="pa-0 ma-0 btn default rounded-0 white-text-bg-dark"  height="72" min-width="100%">
+<v-btn :to="localePath('/contacts')" v-bind="attrs" v-on="on"  class="pa-0 ma-0 btn custom-bg-color rounded-0 white-text-bg-dark"  height="72" min-width="100%">
 <i class="fa-duotone fa-envelope fa-lg"></i> </v-btn>
 </div>
 
@@ -203,7 +203,7 @@ export default {
 
 <style scoped>
 .logo-box{
-background-color: var(--v-default-base) !important;
+/* background-color: var(--v-default-base) !important; */
 height: 5.3125rem;
 }
 
@@ -214,10 +214,10 @@ border-bottom: 1px solid #ffffff1f !important
 .theme--light .v-toolbar.v-app-bar{
 border-bottom: 1px solid rgba(0, 0, 0, 0.12) !important;
 }
-.v-navigation-drawer {
+/* .v-navigation-drawer {
 transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
-
+ */
 
 .v-overlay {
   align-items: center;
@@ -230,7 +230,7 @@ transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   right: 0;
   bottom: 0;
   pointer-events: none;
-  transition: 0.5s cubic-bezier(0.25, 0.8, 0.5, 1), z-index 1ms !important;
+/*   transition: 0.5s cubic-bezier(0.25, 0.8, 0.5, 1), z-index 1ms !important; */
 
 }
 

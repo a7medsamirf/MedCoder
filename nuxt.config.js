@@ -23,15 +23,15 @@ export default {
     ]
   },
 
-/*   router: {
+/*    router: {
     base: '/Startup/'
-  },
+  }, */
 
   loadingIndicator: {
     name: 'chasing-dots',
     color: '#356DFF',
     background: '#fff'
-  }, */
+  }, 
 
   loading: '~/components/widget/LoadingBar.vue',
 
@@ -90,6 +90,7 @@ export default {
     "@nuxtjs/sitemap",
     // https://resources.com/
     "@nuxtjs/style-resources",
+
   ],
 
       /* ** i18n config   */

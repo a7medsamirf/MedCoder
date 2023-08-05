@@ -183,8 +183,10 @@
   @include white-text-color-bg-dark;
 }
 
-
 .section-bg{
   @include palette-background-section;
+}
 
+.custom-bg-color{
+      background: $custom-bg-color;
 }

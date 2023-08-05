@@ -41,7 +41,7 @@
             <v-row>
               <v-col cols="12" md="6" class="py-0">
                 <v-text-field
-                  class="mb-0 rounded-lg"
+                  class="mb-0"
                   :label="$t('contacts.Your-Name')"
                   required
                   outlined
@@ -58,7 +58,7 @@
               </v-col>
               <v-col cols="12" md="12" class="py-0">
                 <v-text-field
-                  class="mb-0 rounded-lg"
+                  class="mb-0"
                   :label="$t('contacts.Subject')"
                   required
                   outlined
