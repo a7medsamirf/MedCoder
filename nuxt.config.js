@@ -108,7 +108,7 @@ export default {
             name: 'AR',
             file: 'ar-AR.js',
             dir: 'rtl',
-            icon: 'svg/flag-ar.svg'
+            icon: 'flag-ar.svg'
           },
           {
             code: 'en',
@@ -116,7 +116,7 @@ export default {
             name: 'EN',
             file: 'en-US.js',
             dir: 'ltr',
-            icon: 'svg/flag-en.svg'
+            icon: 'flag-en.svg'
           },
         ],
         defaultLocale: 'en',

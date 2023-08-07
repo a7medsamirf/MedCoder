@@ -6,7 +6,7 @@
              :key="locale.code"
              @click="changeLanguage(locale.code)"
       >
-        {{ locale.name }}
+        {{ locale.icon }}
       </v-btn>
     </div>
   </template>
