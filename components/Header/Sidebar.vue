@@ -15,7 +15,7 @@
             </v-list-item-icon>
             <v-list-item-title v-text="$t(link.title)" />
           </v-list-item>
-  
+
           <v-list-group
             v-else
             exact
@@ -26,7 +26,7 @@
             <template v-slot:activator>
               <v-list-item-title v-text="$t(link.title)"/>
             </template>
-  
+
             <v-list-item
               exact
               v-for="sublink in link.subLinks"
@@ -38,17 +38,17 @@
               </v-list-item-icon>
               <v-list-item-title v-text="$t(sublink.title)" />
             </v-list-item>
-  
+
           </v-list-group>
-  
+
         </div>
-  
-      </v-list> 
+
+      </v-list>
       <!---------- End Navigation Drawer ---------->
     </div>
   </template>
   <script>
-  
+
   export default {
     name: "Sidebar",
     data () {
@@ -69,7 +69,7 @@
     }
 
   },
-  
+
   }
   </script>
 
@@ -78,7 +78,7 @@
     opacity: 1;
     transform: translateY(0);
 }
-  
+
   .v-list.menu {
     opacity: 0;
     -ms-transform: translateY(-100px);

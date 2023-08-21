@@ -10,7 +10,7 @@
       </v-btn>
     </div>
   </template>
-  
+
   <script>
   export default {
     name: "Settings",
@@ -24,8 +24,8 @@
     mounted() {
       this.$vuetify.rtl = this.$i18n.locale === "ar";
       this.Lang = this.$i18n.locale;
-  
+
     },
-  
+
   }
   </script>
