@@ -17,9 +17,9 @@
 
     <cursor-fx
      color="#cb2d3e80"
-     color-hover="#000"
+     color-hover="#fff"
      outside-size="75px"
-     inside-size="30px"
+     inside-size="25px"
      />
 
 

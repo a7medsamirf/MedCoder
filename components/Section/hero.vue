@@ -7,22 +7,22 @@
           <v-row align="center" justify="center">
             <v-col cols="12" md="6" class="px-0">
               <div class="box half-hero-wrap">
-      
+
                 <div class="title2">
                     <div class="block"> </div>
                     <h1 class="text-color-default hero-title mb-5">{{ $t('HeroSection.hello') }} <br>
                       <span class="">{{ $t('HeroSection.im') }} <span class="custom-text-color">{{ $t('HeroSection.ahmed') }} </span></span>
-                      <br> 
+                      <br>
                       <span class="job-title">
                         <div class="stack" style="--stacks: 3;">
                             <span style="--index: 0;">{{ $t('HeroSection.FrontEnd') }}</span>
                             <span style="--index: 1;">{{ $t('HeroSection.FrontEnd') }}</span>
                             <span style="--index: 2;">{{ $t('HeroSection.FrontEnd') }}</span>
                     </div>
-                        
+
                         </span>
                       <div class="dot"></div>
-                    
+
                     </h1>
                 </div>
                   <div class="role">
@@ -33,7 +33,14 @@
                   <download-button />
 
                   <button class="my-btn my-btn-class-12">Download CV <i class="fa-duotone fa-file-pdf fa-lg"></i></button>
-
+                  <button class="my-btn my-btn-class-12"
+                  type="button"
+                  title="Special button"
+                  data-cursor-hover
+                  data-cursor-mix-blend-mode="difference"
+    >
+        Add
+    </button>
 
      <!--              <div class="scroll-down_btn">
                                         <a id="scrollDown" class="axil-scrollbown smoth-animation" href="#Projects"><span></span></a>
@@ -42,7 +49,7 @@
 
             </div>
 
-       
+
 
     <!--           <div class="text box">
                 <div class="title">
@@ -52,7 +59,7 @@
             <div class="block"></div>
             <p class="use-text-subtitle ma-5 hero-subtitle">{{ $t('HeroSection.subtitle') }}</p>
         </div>
- 
+
                 <button  href="#" title="تواصل معنا" class="btn default ma-5 pa-5"> {{ $t('common.discuss') }}</button>
                 <button href="#" title="تواصل معنا" class="btn outline">{{ $t('common.Learn-more') }}</button>
               </div>
@@ -73,7 +80,7 @@
               </div>
             </v-col>
           </v-row>
-     
+
         </v-container>
       </div>
     </div>
@@ -224,7 +231,7 @@ export default {
           animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
           display: flex;
         }
-  
+
         h1 {
           -webkit-animation: mainFadeIn 2s forwards;
           -o-animation: mainFadeIn 2s forwards;
@@ -235,7 +242,7 @@ export default {
           align-items: baseline;
           position: relative;
           line-height: 1.3;
-  
+
           div.dot {
             width:0px;
             height: 0px;
@@ -251,17 +258,17 @@ export default {
             position: absolute;
             bottom: 13px;
             @include right(-12px);
-  
+
           }
         }
       }
-  
+
       .role {
         width: 100%;
         position: relative;
         display: flex;
         align-items: center;
-        height: 100%;  
+        height: 100%;
         div.block {
           width: 0%;
           height: inherit;
@@ -271,7 +278,7 @@ export default {
           animation-delay: 2s;
           display: flex;
         }
-  
+
         h4 {
           animation: secFadeIn 2s forwards;
           animation-delay: 3.2s;
@@ -284,36 +291,36 @@ export default {
     0% {
       width: 0%;
       left: 0;
-  
+
     }
     50% {
       width: 100%;
       left: 0;
-  
+
     }
     100% {
       width: 0;
       left: 100%;
     }
   }
-  
+
   @keyframes secBlock {
     0% {
       width: 0%;
       left: 0;
-  
+
     }
     50% {
       width: 100%;
       left: 0;
-  
+
     }
     100% {
       width: 0;
       left: 100%;
     }
   }
-  
+
   @keyframes mainFadeIn {
     0% {
       opacity: 0;
@@ -322,8 +329,8 @@ export default {
       opacity: 1;
     }
   }
-  
-  
+
+
   @keyframes popIn {
     0% {
       width: 0px;
@@ -356,10 +363,10 @@ export default {
       background: #e9d856;
       border: 0px solid #222;
       bottom: 13px;
-  
+
     }
   }
-  
+
   @keyframes secFadeIn {
     0% {
       opacity: 0;

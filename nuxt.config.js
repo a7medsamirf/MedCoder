@@ -4,7 +4,7 @@ import { theme } from './config/vuetify.options'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   ssr: false,
-  target: 'static', 
+  target: 'static',
   head: {
     titleTemplate: '%s - MedCoder',
     title: 'MedCoder',
@@ -31,7 +31,7 @@ export default {
     name: 'chasing-dots',
     color: '#356DFF',
     background: '#fff'
-  }, 
+  },
 
   loading: '~/components/widget/LoadingBar.vue',
 
@@ -55,9 +55,8 @@ export default {
     {src: '~/plugins/lightbox.js', mode: 'client' },
     {src: '~/plugins/wow.js', ssr: false},
     {src: '~/plugins/vue-cursor-fx.js', mode: 'client'},
-
-
   ],
+
 /*   serverMiddleware: [
     { path: '/api', handler: '~/api/posts.js' },
   ], */
