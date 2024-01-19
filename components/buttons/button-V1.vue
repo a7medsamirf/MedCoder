@@ -12,13 +12,18 @@ export default {
 
 <style lang="scss" scoped>
 .btn-primary-V1{
-    font-weight: 500;
+    font-weight: 700;
+    color: #171717;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: #171717;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 4px 4px 0px 0px #000000;
     font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320)));
     margin-top: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
     line-height: 23px;
     background: var(--bg-color);
     padding: calc(8px + (12 - 8) * ((100vw - 320px) / (1920 - 320))) calc(18px + (30 - 18) * ((100vw - 320px) / (1920 - 320)));
-    color: #fff !important;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -46,7 +51,7 @@ export default {
  .arrow {
     width: calc(10px + (15 - 10) * ((100vw - 320px) / (1920 - 320)));
     height: 2px;
-    background-color: #fff;
+    background-color: #171717;
     display: inline-block;
     position: relative;
     margin-top: 2px;

@@ -29,7 +29,7 @@ export default {
 
   loadingIndicator: {
     name: 'chasing-dots',
-    color: '#356DFF',
+    color: '#C8F27C',
     background: '#fff'
   },
 

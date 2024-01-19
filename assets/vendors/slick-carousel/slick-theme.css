@@ -160,7 +160,7 @@
   content: '•';
   text-align: center;
   opacity: .25;
-  color: #356dff;
+  color: #C8F27C;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -168,15 +168,15 @@
 
 .slick-dots li.slick-active button:before {
   opacity: .75;
-  color: #356dff;
+  color: #C8F27C;
   border-radius: 50%;
-  border: 1px solid #3a37eb;
+  border: 1px solid #C8F27C;
 }
 
 
 .slick-prev:before,
 .slick-next:before {
-    color: #3a37eb;
+    color: #C8F27C;
     background-color: #fff;
     padding: 10px;
     transition: $transition;
@@ -185,7 +185,7 @@
 .slick-prev:hover:before,
 .slick-next:hover:before {
     color: #fff;
-    background-color: #3a37eb;
+    background-color: #C8F27C;
     padding: 10px;
 }
 
